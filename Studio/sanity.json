@@ -1,11 +1,11 @@
 {
   "root": true,
   "api": {
-    "projectId": "r5jsh8ql",
+    "projectId": "2dwxpbw0",
     "dataset": "production"
   },
   "project": {
-    "name": "My Classy Portfolio"
+    "name": "Pepper Von Laughy"
   },
   "plugins": [
     "@sanity/base",

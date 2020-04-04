@@ -63,7 +63,7 @@ const Project = styled.div`
   color: white;
   h3 {
     font-size: 25px;
-    font-family: "Glacial Regular";
+    font-family: "Sen";
     margin-bottom: 10px;
   }
 `

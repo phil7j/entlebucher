@@ -128,7 +128,7 @@ const NavItem = styled.div`
       /* transition: all 0.5s ease; */
 
       a {
-        font-family: "Open Sans Regular", sans-serif;
+        font-family: "Open Sans", sans-serif;
         font-size: 25px;
         text-decoration: none;
         color: white;

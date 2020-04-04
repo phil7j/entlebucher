@@ -74,7 +74,7 @@ const Description = styled.article`
   padding: 30px;
   max-width: 800px;
   margin: 0 auto 40px auto;
-  font-family: "Glacial Regular";
+  font-family: "Sen";
   ul {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -93,7 +93,7 @@ const Description = styled.article`
 `
 
 const MainInfo = styled.div`
-  font-family: "Glacial Regular";
+  font-family: "Sen";
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;

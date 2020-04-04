@@ -1,15 +1,21 @@
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  background: black;
-  overflow: hidden;
-  overflow-y: hidden;
-  height: 100%;
+import { createGlobalStyle } from "styled-components"
 
-}
-body {
-  margin: 0;
+const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sen:wght@400;700&display=swap');
+
+
+  html {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+      background: black;
+      overflow: hidden;
+      overflow-y: hidden;
+      height: 100%;
+
+    }
+    body {
+        font-family: 'Open Sans';
+        margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
@@ -20,22 +26,6 @@ body {
   display: none;
 }
 
-@font-face {
-  font-family: "Sen";
-  src: url("../fonts/GlacialIndifference-Regular.otf");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Regular.ttf");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Light.ttf");
-}
-@font-face {
-  font-family: "Open Sans";
-  src: url("../fonts/OpenSans-Bold.ttf");
-}
 
 article,
 aside,
@@ -229,7 +219,7 @@ html {
 }
 body {
   color: white;
-  font-family: georgia, serif;
+  /* font-family: georgia, serif; */
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -259,7 +249,7 @@ h1 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen',
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
@@ -649,3 +639,5 @@ pre tt:after {
     font-size: 100%;
   }
 }
+`
+export default GlobalStyle

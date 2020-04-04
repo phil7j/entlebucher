@@ -30,7 +30,7 @@ const Projects = () => {
     <>
       <SEO title="Projects" />
       <h2 style={{ textAlign: "center", marginTop: "0", marginBottom: 15 }}>Projects</h2>
-      <p style={{textAlign: "center", fontFamily: "Glacial Regular", marginBottom: 0}}>What I've been working on lately:</p>
+      <p style={{textAlign: "center", fontFamily: "Sen", marginBottom: 0}}>What I've been working on lately:</p>
       <div style={{display: "flex", justifyContent: "center"}}>
       <ProjectContainer>
         {data.allSanityProject.nodes.map((node, index) => (

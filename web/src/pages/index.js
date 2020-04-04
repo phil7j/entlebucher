@@ -71,7 +71,7 @@ const Headline = styled.div`
   flex-direction: column;
   align-items: center;
   h1 {
-    font-family: "Glacial Regular", sans-serif;
+    font-family: "Sen", sans-serif;
     font-size: 51px;
     text-align: center;
     @media (max-width: 600px) {
@@ -80,7 +80,7 @@ const Headline = styled.div`
     }
   }
   h3 {
-    font-family: "Open Sans Regular", sans-serif;
+    font-family: "Open Sans", sans-serif;
     text-align: center;
     font-size: 26.5px;
     @media (max-width: 600px) {
@@ -95,7 +95,7 @@ const Headline = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    font-family: "Open Sans Bold", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     width: 140px;
     height: 50px;

@@ -175,7 +175,7 @@ const Tech = styled.div`
     /* display: block; */
     margin: 20px;
     font-size: 40px;
-    font-family: "Glacial Regular", sans-serif;
+    font-family: "Sen", sans-serif;
   }
   div.tech-section {
     /* margin: 5px; */
@@ -221,7 +221,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: "Open Sans Bold", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 14px;
     width: 100%;
     min-height: 145px;
@@ -266,7 +266,7 @@ const TechList = styled.div`
     align-items: center;
     margin: 10px;
     p {
-      font-family: "Open Sans Regular", sans-serif;
+      font-family: "Open Sans", sans-serif;
       margin-bottom: 0;
       /* color: black; */
     }
@@ -281,7 +281,7 @@ const Description = styled.div`
 
   p {
     margin: auto;
-    font-family: "Glacial Regular", sans-serif;
+    font-family: "Sen", sans-serif;
     max-width: 380px;
     @media (max-width: 970px) {
     margin-bottom: 20px;
@@ -297,7 +297,7 @@ const Description = styled.div`
   }
 
   h3 {
-    font-family: "Glacial Regular", sans-serif;
+    font-family: "Sen", sans-serif;
     text-align: center;
     font-size: 40px;
     color: white;

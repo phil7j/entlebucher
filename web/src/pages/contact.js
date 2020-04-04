@@ -63,7 +63,7 @@ const FindMe = styled.div`
     color:#2867B2;
   }
   h4 {
-    font-family: "Glacial Regular", sans-serif;
+    font-family: "Sen", sans-serif;
     font-weight: 500;
     margin: 10px;
     font-size: 30px;
