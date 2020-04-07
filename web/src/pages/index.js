@@ -8,11 +8,11 @@ import { useStaticQuery, graphql } from "gatsby"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
-  query GetPhilPhoto {
+  query {
     file(relativePath: { eq: "profile.jpeg" }) {
       childImageSharp {
         fluid {
-          ...GatsbyImageSharpFluid
+          src
         }
       }
     }

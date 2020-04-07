@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
   html {
       -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
-      background: black;
       overflow: hidden;
       overflow-y: hidden;
       height: 100%;
@@ -22,9 +21,9 @@ const GlobalStyle = createGlobalStyle`
 }
 
 /* Hide Scroll Bar */
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 
 article,

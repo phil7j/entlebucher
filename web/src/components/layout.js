@@ -38,7 +38,7 @@ Layout.propTypes = {
 }
 
 const Main = styled.main`
-height: 100%;
+/* height: 100%; */
 `
 
 export default Layout

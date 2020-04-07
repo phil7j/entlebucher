@@ -5,8 +5,8 @@
 module.exports = {
 
   siteMetadata: {
-    title: `Philip Johnson's Portfolio`,
-    description: `Full Stack Software Developer, learn more about me here.`,
+    title: `Entlebucher Sennenhunde`,
+    description: `Entlebucher Sennenhunde Von der Laughy`,
     author: `Philip Johnson`,
   },
   plugins: [
