@@ -2,45 +2,19 @@ import React, { useState } from "react"
 import styled from "styled-components"
 import MenuIcon from "@material-ui/icons/Menu"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import Logo from "./Logo"
+
 
 const Header = () => {
   let [open, setOpen] = useState(false)
-  const data = useStaticQuery(graphql`
-  query GetLogo {
-    file(relativePath: { eq: "entlebucher.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`)
 
   return (
     <>
       <Container>
-        <Logo fluid={data.file.childImageSharp.fluid}>
-          <Img fluid={data.file.childImageSharp.fluid} alt="A laughing cartoon of an Entlebucher"/>
-        </Logo>
-
+        <Logo setOpen={setOpen}/>
 
         <Hamburger open={open} onClick={() => setOpen(!open)} />
-        <Menu open={open}>
-          <NavItem>
-            <AniLink
-              cover
-              duration={0.7}
-              bg="#2d2d2d"
-              direction="down"
-              to="/"
-              onClick={() => setOpen(false)}
-            >
-              Home
-            </AniLink>
-          </NavItem>
+        <Nav open={open}>
           <NavItem>
             <AniLink
               cover
@@ -77,16 +51,14 @@ const Header = () => {
               Contact
             </AniLink>
           </NavItem>
-        </Menu>
+        </Nav>
       </Container>
+
     </>
   )
 }
 
-const Logo = styled.div`
-z-index: 100;
-width: 100px;
-`
+
 
 const Hamburger = styled(MenuIcon)`
   /* align-self: flex-end; */
@@ -111,13 +83,20 @@ const Hamburger = styled(MenuIcon)`
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-bottom: 1.45rem;
   height: 70px;
-  z-index: 100;
+  z-index: 102;
+  background: white;
+  font-family: "Dosis", sans-serif;
+  font-weight: 500;
+  padding: 0 20px;
+  @media (max-width: 1024px) {
+    justify-content: space-between;
+  }
 `
 
-const Menu = styled.div`
+const Nav = styled.div`
       display: flex;
       justify-content: flex-end;
       background: white;
@@ -144,10 +123,10 @@ const NavItem = styled.div`
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   /* transition: all 0.5s ease; */
 
   a {
-    font-family: "Open Sans", sans-serif;
     font-size: 25px;
     text-decoration: none;
     color: black;
