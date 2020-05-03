@@ -1,7 +1,7 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import styled from "styled-components"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import Img from "gatsby-image"
 
 const Logo = props => {
@@ -18,24 +18,17 @@ const Logo = props => {
   `)
   return (
     <Container>
-      <AniLink
-        cover
-        duration={0.7}
-        bg="#2d2d2d"
-        direction="down"
+      <Link
         to="/"
         onClick={() => props.setOpen(false)}
-
       >
         <LogoImg>
           <Img
             fluid={data.file.childImageSharp.fluid}
             alt="A laughing cartoon of an Entlebucher"
-            backgroundColor={"white"}
           />
         </LogoImg>
-        Home
-      </AniLink>
+      </Link>
     </Container>
   )
 }

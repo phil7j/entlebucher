@@ -1,59 +1,24 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import MenuIcon from "@material-ui/icons/Menu"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Logo from "./Logo"
+import Dropdown from "./Dropdown"
 
 
 const Header = () => {
   let [open, setOpen] = useState(false)
 
+  let links = [{text: "About", link:"/about"}, {text: "Projects", link:"/projects"},{text: "Kontakt", link:"/kontakt"}]
+
   return (
     <>
       <Container>
         <Logo setOpen={setOpen}/>
-
         <Hamburger open={open} onClick={() => setOpen(!open)} />
         <Nav open={open}>
-          <NavItem>
-            <AniLink
-              cover
-              duration={0.7}
-              bg="#2d2d2d"
-              direction="down"
-              to="/about"
-              onClick={() => setOpen(false)}
-            >
-              About
-            </AniLink>
-          </NavItem>
-          <NavItem>
-            <AniLink
-              cover
-              duration={0.7}
-              bg="#2d2d2d"
-              direction="down"
-              to="/projects"
-              onClick={() => setOpen(false)}
-            >
-              Projects
-            </AniLink>
-          </NavItem>
-          <NavItem>
-            <AniLink
-              cover
-              duration={0.7}
-              bg="#2d2d2d"
-              direction="down"
-              to="/contact"
-              onClick={() => setOpen(false)}
-            >
-              Contact
-            </AniLink>
-          </NavItem>
+          {links.map(link => <Dropdown to={link.to} text={link.text} />)}
         </Nav>
       </Container>
-
     </>
   )
 }
@@ -85,7 +50,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   margin-bottom: 1.45rem;
-  height: 70px;
+  /* height: 70px; */
   z-index: 102;
   background: white;
   font-family: "Dosis", sans-serif;
@@ -98,6 +63,7 @@ const Container = styled.div`
 
 const Nav = styled.div`
       display: flex;
+      position: relative;
       justify-content: flex-end;
       background: white;
       /* margin: 0 auto; */
@@ -119,42 +85,6 @@ const Nav = styled.div`
         z-index: 99;
   }
 `
-const NavItem = styled.div`
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  /* transition: all 0.5s ease; */
 
-  a {
-    font-size: 25px;
-    text-decoration: none;
-    color: black;
-    padding: 20px 20px;
-    transition: background 0.8s ease, color 0.8s ease;
-    /* &:hover {
-          color: black;
-        } */
-    @media (max-width: 1024px) {
-      /* width: 100%; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-      /* padding: 10%; */
-    }
-  }
-  &&:hover {
-    background: black;
-    a {
-      color: white;
-    }
-  }
-  @media (max-width: 1024px) {
-    width: 100%;
-    /* justify-content: center; */
-  }
-`
 
 export default Header
