@@ -3,27 +3,55 @@ import styled from "styled-components"
 import MenuIcon from "@material-ui/icons/Menu"
 import Logo from "./Logo"
 import Dropdown from "./Dropdown"
-
+import NormalLink from "./NormalLink"
+import ContactLink from "./ContactLink"
 
 const Header = () => {
   let [open, setOpen] = useState(false)
 
-  let links = [{text: "About", link:"/about"}, {text: "Projects", link:"/projects"},{text: "Kontakt", link:"/kontakt"}]
+  let links = [
+    {
+      text: "Unsere Hündin",
+      link: "/about",
+      type: "dropdown",
+      nestedLinks: [
+        { text: "Steckbrief", link: "/steckbrief" },
+        { text: "Pepper's Zuhause", link: "/zuhause" },
+      ],
+    },
+    {
+      text: "Welpenzucht",
+      link: "/projects",
+      type: "dropdown",
+      nestedLinks: [
+        { text: "Zuchtstätte", link: "/zuchtstätte" },
+        { text: "Welpen", link: "/welpen" },
+      ],
+    },
+    { text: "naVita Produkte", link: "/kontakt", type: "normal" },
+    { text: "Kontakt", link: "/kontakt", type: "contact" },
+  ]
 
   return (
     <>
       <Container>
-        <Logo setOpen={setOpen}/>
+        <Logo setOpen={setOpen} />
         <Hamburger open={open} onClick={() => setOpen(!open)} />
         <Nav open={open}>
-          {links.map(link => <Dropdown to={link.to} text={link.text} />)}
+          {links.map(link =>
+            link.type === "dropdown" ? (
+              <Dropdown to={link.to} text={link.text} nestedLinks={link.nestedLinks} />
+            ) : link.type === "normal" ? (
+              <NormalLink to={link.to} text={link.text} />
+            ) : (
+              <ContactLink to={link.to} text={link.text} />
+            )
+          )}
         </Nav>
       </Container>
     </>
   )
 }
-
-
 
 const Hamburger = styled(MenuIcon)`
   /* align-self: flex-end; */
@@ -49,10 +77,10 @@ const Hamburger = styled(MenuIcon)`
 const Container = styled.div`
   display: flex;
   justify-content: space-around;
-  margin-bottom: 1.45rem;
+  align-items: center;
+  margin-bottom: 20px;
   /* height: 70px; */
   z-index: 102;
-  background: white;
   font-family: "Dosis", sans-serif;
   font-weight: 500;
   padding: 0 20px;
@@ -85,6 +113,5 @@ const Nav = styled.div`
         z-index: 99;
   }
 `
-
 
 export default Header
