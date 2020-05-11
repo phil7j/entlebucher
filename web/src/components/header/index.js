@@ -61,14 +61,13 @@ const Hamburger = styled(MenuIcon)`
   height: 100%;
   box-sizing: content-box;
   z-index: 101;
-  color: grey;
+  color: #d59d82;
   &:hover {
-    color: white;
-    background: black;
+    color: black;
   }
   @media (max-width: 1024px) {
     display: block;
-    font-size: 70px;
+    font-size: 50px;
   }
   @media (max-width: 600px) {
   }
@@ -91,7 +90,7 @@ const Container = styled.div`
 
 const Nav = styled.div`
       display: flex;
-      position: relative;
+      /* position: relative; */
       justify-content: flex-end;
       background: white;
       /* margin: 0 auto; */
@@ -104,12 +103,15 @@ const Nav = styled.div`
       @media (max-width: 1024px) {
         transition: right 0.3s linear;
         position: fixed;
+        /* top: 0; */
+        margin-top: 50px;
         /* display: ${props => (props.open ? "flex" : "none")}; */
         right: ${props => (props.open ? "0" : "-1300px")};
         /* opacity: ${props => (props.open ? "1" : "0")}; */
         flex-direction: column;
         width: 100%;
         align-items: center;
+        justify-content: space-evenly;
         z-index: 99;
   }
 `

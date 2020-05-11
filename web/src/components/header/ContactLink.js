@@ -17,6 +17,13 @@ const NavItem = styled.div`
 border: 1px solid #d59d82;
 margin-left: 5px;
 transition: background .3s ease-in-out;
+@media (max-width: 1024px) {
+    border: none;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 a {
     font-size: 15px;
     text-decoration: none;

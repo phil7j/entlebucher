@@ -24,7 +24,12 @@ const DropdownContainer = styled.div`
   cursor: pointer;
   height: 100%;
   @media (max-width: 1024px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
+    height: auto;
+    border-top: 2px solid #d59d82
   }
 `
 
@@ -52,7 +57,11 @@ display: flex;
 flex-direction: column;
 position: absolute;
 padding-bottom: 5px;
-
+@media (max-width: 1024px) {
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+  }
 
  ${DropdownContainer}:hover & {
     visibility: visible;
