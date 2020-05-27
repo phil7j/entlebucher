@@ -15,14 +15,23 @@ const NormalLink = props => {
 
 const NavItem = styled.div`
  @media (max-width: 1024px) {
-    margin-top: 20px;
-    border-top: 2px solid #d59d82
+    /* border: 2px solid #d59d82; */
+    padding: 15px;
   }
 a {
     font-size: 15px;
+    font-weight: 500;
     text-decoration: none;
     color: black;
     padding: 10px 15px;
+    @media (max-width: 1024px) {
+    font-size: 26px;
+    transition: border-left .2s ease-in-out, color .2s ease;
+    &:hover {
+        border-left: 5px solid #d59d82;
+        color: #d59d82;
+    }
+    }
 }
 `
 

@@ -7,7 +7,7 @@ import NormalLink from "./NormalLink"
 import ContactLink from "./ContactLink"
 
 const Header = () => {
-  let [open, setOpen] = useState(false)
+  let [open, setOpen] = useState(true)
 
   let links = [
     {
@@ -90,10 +90,8 @@ const Container = styled.div`
 
 const Nav = styled.div`
       display: flex;
-      /* position: relative; */
       justify-content: flex-end;
-      background: white;
-      /* margin: 0 auto; */
+      background: white;   
       max-width: 960;
       height: 100%;
       opacity: 1;
@@ -102,9 +100,9 @@ const Nav = styled.div`
       transition: background 0.5s linear, color 0.5s linear;
       @media (max-width: 1024px) {
         transition: right 0.3s linear;
-        position: fixed;
-        /* top: 0; */
-        margin-top: 50px;
+        position: absolute;
+        top: 0;
+        /* margin-top: 50px; */
         /* display: ${props => (props.open ? "flex" : "none")}; */
         right: ${props => (props.open ? "0" : "-1300px")};
         /* opacity: ${props => (props.open ? "1" : "0")}; */

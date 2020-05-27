@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Sen:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;600;800&display=swap');
 
+
   html {
       -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
@@ -19,12 +20,6 @@ const GlobalStyle = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
 }
-
-/* Hide Scroll Bar */
-/* ::-webkit-scrollbar {
-  display: none;
-} */
-
 
 article,
 aside,
