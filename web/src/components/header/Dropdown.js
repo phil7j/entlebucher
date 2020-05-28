@@ -7,7 +7,6 @@ const Dropdown = props => {
 
     return (
         <DropdownContainer>
-            {/* <Link to={props.to}>{props.text}</Link> */}
             <DropdownBtn>{props.text}<Arrow fontSize="medium"/>
               </DropdownBtn>
             <DropdownContent>
@@ -29,7 +28,6 @@ const DropdownContainer = styled.div`
     align-items: center;
     width: 100%;
     height: auto;
-    /* border-top: 2px solid #d59d82 */
   }
 `
 
@@ -77,15 +75,12 @@ padding-bottom: 5px;
 } 
 
 a {
-    /* position: relative; */
     font-size: 15px;
     text-decoration: none;
     color: black;
     padding: 10px 15px;
     transition: border 0.2s linear, color 0.2s linear;
-    /* &:hover {
-          color: black;
-        } */
+  
     @media (max-width: 1024px) {
       display: flex;
       justify-content: center;

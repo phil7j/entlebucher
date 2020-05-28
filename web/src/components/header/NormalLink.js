@@ -15,7 +15,6 @@ const NormalLink = props => {
 
 const NavItem = styled.div`
  @media (max-width: 1024px) {
-    /* border: 2px solid #d59d82; */
     padding: 15px;
   }
 a {

@@ -54,11 +54,27 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/profile.jpeg`, // This path is relative to the root of the site.
+        icon: `src/images/entlebucher.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Dosis`,
+            variants: [`400`,`500`,`600`, `800`]
+          },
+          {
+            family: `Abhaya Libre`,
+            variants: [`600`]
+          },
+          {
+            family: `Open Sans`,
+            variants: [`400`, `700`]
+          },
+        ],
+      },
+    }
   ],
 }

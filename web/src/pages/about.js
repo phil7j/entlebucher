@@ -18,17 +18,17 @@ import {
 } from "@icons-pack/react-simple-icons"
 
 const About = () => {
-  const data = useStaticQuery(graphql`
-    query GetPhilPhoto2 {
-      file(relativePath: { eq: "hiking.jpg" }) {
-        childImageSharp {
-          fluid {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `)
+  // const data = useStaticQuery(graphql`
+  //   query GetPhilPhoto2 {
+  //     file(relativePath: { eq: "hiking.jpg" }) {
+  //       childImageSharp {
+  //         fluid {
+  //           ...GatsbyImageSharpFluid
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
   return (
     <>
       <SEO title="About" />
@@ -44,13 +44,13 @@ const About = () => {
 
           </Description>
           <Phil>
-            <Img
+            {/* <Img
               fluid={data.file.childImageSharp.fluid}
               alt="Me hiking through the Swiss Alps"
               // loading="eager"
               // durationFadeIn={200}
               backgroundColor="black"
-            />
+            /> */}
           </Phil>
         </FirstSection>
         <Skills>

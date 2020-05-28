@@ -7,7 +7,7 @@ import NormalLink from "./NormalLink"
 import ContactLink from "./ContactLink"
 
 const Header = () => {
-  let [open, setOpen] = useState(true)
+  let [open, setOpen] = useState(false)
 
   let links = [
     {
@@ -40,7 +40,11 @@ const Header = () => {
         <Nav open={open}>
           {links.map(link =>
             link.type === "dropdown" ? (
-              <Dropdown to={link.to} text={link.text} nestedLinks={link.nestedLinks} />
+              <Dropdown
+                to={link.to}
+                text={link.text}
+                nestedLinks={link.nestedLinks}
+              />
             ) : link.type === "normal" ? (
               <NormalLink to={link.to} text={link.text} />
             ) : (
@@ -54,7 +58,6 @@ const Header = () => {
 }
 
 const Hamburger = styled(MenuIcon)`
-  /* align-self: flex-end; */
   display: none;
   font-size: 50px;
   padding: 0px 15px;
@@ -78,7 +81,6 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 20px;
-  /* height: 70px; */
   z-index: 102;
   font-family: "Dosis", sans-serif;
   font-weight: 500;
@@ -89,28 +91,25 @@ const Container = styled.div`
 `
 
 const Nav = styled.div`
-      display: flex;
-      justify-content: flex-end;
-      background: white;   
-      max-width: 960;
-      height: 100%;
-      opacity: 1;
-      /* border: ${props =>
-        props.open ? "4px solid green" : "4px solid red"}; */
-      transition: background 0.5s linear, color 0.5s linear;
-      @media (max-width: 1024px) {
-        transition: right 0.3s linear;
-        position: absolute;
-        top: 0;
-        /* margin-top: 50px; */
-        /* display: ${props => (props.open ? "flex" : "none")}; */
-        right: ${props => (props.open ? "0" : "-1300px")};
-        /* opacity: ${props => (props.open ? "1" : "0")}; */
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-        justify-content: space-evenly;
-        z-index: 99;
+  display: flex;
+  justify-content: flex-end;
+  background: white;
+  max-width: 960;
+  height: 100%;
+  opacity: 1;
+  transition: background 0.5s linear, color 0.5s linear;
+  @media (max-width: 1024px) {
+    transition: right 0.3s linear;
+    position: absolute;
+    top: 0;
+
+    right: ${props => (props.open ? "0" : "-1300px")};
+
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 99;
   }
 `
 
