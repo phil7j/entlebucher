@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components"
 
 const GlobalStyle = createGlobalStyle`
 
-  html {
+  html { 
       -ms-text-size-adjust: 100%;
       -webkit-text-size-adjust: 100%;
       overflow: hidden;
@@ -209,7 +209,6 @@ html {
   box-sizing: inherit;
 }
 body {
-  color: white;
   /* font-family: georgia, serif; */
   font-weight: normal;
   word-wrap: break-word;
