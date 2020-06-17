@@ -6,7 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 const Jumbotron = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "pepper-home.jpeg" }) {
+      file(relativePath: { eq: "pepper-home.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -31,7 +31,6 @@ const Jumbotron = () => {
         // loading="eager"
         // durationFadeIn={200}
         // backgroundColor="white"
-        imgStyle={{ height: "80%" }}
       />
     </Container>
   )
@@ -41,15 +40,17 @@ const Container = styled.div`
   width: 100%;
 `
 
-const JumboImage = styled(Img)``
+const JumboImage = styled(Img)`
+  max-height: 900px;
+`
 
 const FadeImage = styled.div`
   width: 100%;
-  max-height: 100%;
+  height: 100%;
   background: white;
   position: absolute;
   z-index: 1;
-  opacity: 0.2;
+  opacity: 0.4;
 `
 
 const Heading = styled.div`
@@ -71,6 +72,33 @@ const Heading = styled.div`
     font-family: "Abhaya Libre";
     align-self: flex-end;
     font-weight: 400;
+  }
+  @media (max-width: 1000px) {
+    justify-content: space-between;
+    //position: relative;
+    top: 50px;
+    left: 10px;
+    h1 {
+      font-size: 25px;
+      align-self: center;
+    }
+    h2 {
+      font-size: 20px;
+      align-self: flex-end;
+    }
+  }
+  @media (max-width: 400px) {
+    top: 0;
+    bottom: 900px;
+    position: sticky;
+    h1 {
+      font-size: 25px;
+      align-self: center;
+    }
+    h2 {
+      font-size: 20px;
+      align-self: center;
+    }
   }
 `
 

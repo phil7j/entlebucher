@@ -3,17 +3,14 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 
-const UberUns = () => {
+const WelpenZucht = () => {
   return (
     <Container>
       <Heading>
         <h2>
-          Über<span> uns</span>
+          Welpen<span>zucht</span>
         </h2>
-        <Description>
-          Willkommen im Zürcher Oberland, wo rassenreine Entlebucher-Sennenhunde
-          mit dem Zuchtnamen "Von der Laughy" gezüchtet werden.
-        </Description>
+        <Description>Zurzeit haben wir keine Welpen. </Description>
       </Heading>
     </Container>
   )
@@ -40,4 +37,4 @@ const Description = styled.div`
   color: black;
 `
 
-export default UberUns
+export default WelpenZucht

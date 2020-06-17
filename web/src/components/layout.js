@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import Header from "./header"
+import Footer from "./Footer"
 import GlobalStyle from "../components/GlobalStyle"
 
 const Layout = ({ children }) => {
@@ -17,17 +18,13 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <Container>
       <GlobalStyle />
       <Header siteTitle={data.site.siteMetadata.title} />
 
       <Main>{children}</Main>
-      {/* <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer> */}
-    </>
+      <Footer />
+    </Container>
   )
 }
 
@@ -37,6 +34,14 @@ Layout.propTypes = {
 
 const Main = styled.main`
   /* height: 100%; */
+`
+const Container = styled.main`
+  display: grid;
+  grid-template-rows: 100px auto 100px;
+  grid-template-areas:
+    "header"
+    "main-content"
+    "footer";
 `
 
 export default Layout

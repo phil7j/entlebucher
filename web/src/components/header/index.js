@@ -94,8 +94,7 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-end;
   background: white;
-  max-width: 960;
-  height: 100%;
+  max-width: 960px;
   opacity: 1;
   transition: background 0.5s linear, color 0.5s linear;
   @media (max-width: 1024px) {
@@ -104,7 +103,7 @@ const Nav = styled.div`
     top: 0;
 
     right: ${props => (props.open ? "0" : "-1300px")};
-
+    height: 100%;
     flex-direction: column;
     width: 100%;
     align-items: center;
