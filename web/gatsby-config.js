@@ -3,7 +3,6 @@
 // })
 
 module.exports = {
-
   siteMetadata: {
     title: `Entlebucher Sennenhunde`,
     description: `Entlebucher Sennenhunde Von der Laughy`,
@@ -14,9 +13,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-transition-link",
       options: {
-          layout: require.resolve(`./src/components/layout.js`),
-        }
-   },
+        layout: require.resolve(`./src/components/layout.js`),
+      },
+    },
     {
       resolve: `gatsby-plugin-material-ui`,
       options: {
@@ -34,10 +33,10 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: "gatsby-source-sanity",
       options: {
-        projectId: '2dwxpbw0',
-        dataset: 'production',
+        projectId: "2dwxpbw0",
+        dataset: "production",
         watchMode: true,
         overlayDrafts: true,
         token: process.env.SANITY_READ_TOKEN,
@@ -51,30 +50,11 @@ module.exports = {
         name: `Philips-Portfolio`,
         short_name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ffffff`,
+        theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `src/images/entlebucher.png`, // This path is relative to the root of the site.
       },
     },
-    {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
-        fonts: [
-          {
-            family: `Dosis`,
-            variants: [`400`,`500`,`600`, `800`]
-          },
-          {
-            family: `Abhaya Libre`,
-            variants: [`600`]
-          },
-          {
-            family: `Open Sans`,
-            variants: [`400`, `700`]
-          },
-        ],
-      },
-    }
   ],
 }

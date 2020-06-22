@@ -25,19 +25,14 @@ const Jumbotron = () => {
         <h2>von der Laughy</h2>
       </Heading>
       <FadeImage />
-      <JumboImage
-        fluid={data.file.childImageSharp.fluid}
-        alt="Pepper"
-        // loading="eager"
-        // durationFadeIn={200}
-        // backgroundColor="white"
-      />
+      <JumboImage fluid={data.file.childImageSharp.fluid} alt="Pepper" />
     </Container>
   )
 }
 
 const Container = styled.div`
   width: 100%;
+  position: relative;
 `
 
 const JumboImage = styled(Img)`
@@ -49,6 +44,7 @@ const FadeImage = styled.div`
   height: 100%;
   background: white;
   position: absolute;
+  top: 0;
   z-index: 1;
   opacity: 0.4;
 `
@@ -59,7 +55,7 @@ const Heading = styled.div`
   flex-direction: column;
   color: black;
   z-index: 2;
-  left: 15%;
+  left: 8%;
   top: 15%;
   h1 {
     span {
@@ -67,11 +63,13 @@ const Heading = styled.div`
     }
     font-family: "Abhaya Libre";
     font-weight: 400;
+    letter-spacing: 1px;
   }
   h2 {
     font-family: "Abhaya Libre";
     align-self: flex-end;
     font-weight: 400;
+    letter-spacing: 1px;
   }
   @media (max-width: 1000px) {
     justify-content: space-between;
