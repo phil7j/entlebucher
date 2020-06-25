@@ -22,7 +22,7 @@ const UnsereHundin = () => {
       </ImgContainer>
       <Content>
         <h2>
-          Unsere<span> Hundin</span>
+          Unsere<span> Hündin</span>
         </h2>
         <Subtitle>Pepper Halla von der Haslere</Subtitle>
         <p>
@@ -62,7 +62,7 @@ const Content = styled.div`
     }
   }
   p {
-    font-family: "Abhaya Libre";
+    font-family: "Dosis";
     max-width: 300px;
     font-size: 15px;
     margin-top: 35px;
@@ -79,7 +79,7 @@ const Subtitle = styled.div`
 `
 const ImgContainer = styled.div`
   width: 55%;
-  max-width: 640px;
+  max-width: 500px;
   margin-bottom: 15px;
 `
 
@@ -94,6 +94,7 @@ const Button = styled.div`
   transition: all 0.5s ease-in-out;
   cursor: pointer;
   margin: 0 auto;
+  box-shadow: 10px 10px 20px 0px rgba(50, 50, 50, 0.5);
   &:hover {
     color: white;
     background-color: black;
