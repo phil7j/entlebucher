@@ -12,11 +12,11 @@ const Header = () => {
   let links = [
     {
       text: "Unsere Hündin",
-      link: "/about",
+      to: "/about",
       type: "dropdown",
       nestedLinks: [
-        { text: "Steckbrief", link: "/steckbrief" },
-        { text: "Pepper's Zuhause", link: "/zuhause" },
+        { text: "Steckbrief", to: "/steckbrief" },
+        { text: "Pepper's Zuhause", to: "/zuhause" },
       ],
     },
     {
@@ -24,12 +24,12 @@ const Header = () => {
       link: "/projects",
       type: "dropdown",
       nestedLinks: [
-        { text: "Zuchtstätte", link: "/zuchtstätte" },
-        { text: "Welpen", link: "/welpen" },
+        { text: "Zuchtstätte", to: "/zuchtstatte" },
+        { text: "Welpen", to: "/welpen" },
       ],
     },
-    { text: "naVita Produkte", link: "/kontakt", type: "normal" },
-    { text: "Kontakt", link: "/kontakt", type: "contact" },
+    { text: "naVita Produkte", to: "/navita", type: "normal" },
+    { text: "Kontakt", to: "/kontakt", type: "contact" },
   ]
 
   return (

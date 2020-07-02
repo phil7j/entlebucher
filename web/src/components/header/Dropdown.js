@@ -1,22 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown"
 
 const Dropdown = props => {
-
-    return (
-        <DropdownContainer>
-            <DropdownBtn>{props.text}<Arrow fontSize="medium"/>
-              </DropdownBtn>
-            <DropdownContent>
-                {props.nestedLinks !== undefined ?
-                props.nestedLinks.map(link => <Link to={link.link}>{link.text}</Link>)
-                : null}
-            </DropdownContent>
-        </DropdownContainer>
-
-    )
+  return (
+    <DropdownContainer>
+      <DropdownBtn>
+        {props.text}
+        <Arrow fontSize="medium" />
+      </DropdownBtn>
+      <DropdownContent>
+        {props.nestedLinks !== undefined
+          ? props.nestedLinks.map(link => <Link to={link.to}>{link.text}</Link>)
+          : null}
+      </DropdownContent>
+    </DropdownContainer>
+  )
 }
 
 const DropdownContainer = styled.div`
@@ -32,55 +32,55 @@ const DropdownContainer = styled.div`
 `
 
 const Arrow = styled(ArrowDropDownIcon)`
-color: #d59d82;
-@media (max-width: 1024px) {
- display: none;
-}
+  color: #d59d82;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 const DropdownBtn = styled.div`
-color: black;
-padding: 0 15px;
-font-size: 16px;
-display: flex;
-align-items: center;
-@media (max-width: 1024px) {
-  font-size: 26px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid black;
-  margin-bottom: 15px;
-}
+  color: black;
+  padding: 0 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  @media (max-width: 1024px) {
+    font-size: 26px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid black;
+    margin-bottom: 15px;
+  }
 `
 
 const DropdownContent = styled.div`
-visibility: hidden;
-min-width: 120px;
-text-align: right;
-z-index: 2;
-transition: opacity 0.5s ease-in-out;
-opacity: 0;
-display: flex;
-flex-direction: column;
-position: absolute;
-padding-bottom: 5px;
-@media (max-width: 1024px) {
+  visibility: hidden;
+  min-width: 120px;
+  text-align: right;
+  z-index: 2;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding-bottom: 5px;
+  @media (max-width: 1024px) {
     position: relative;
     visibility: visible;
     opacity: 1;
   }
 
- ${DropdownContainer}:hover & {
+  ${DropdownContainer}:hover & {
     visibility: visible;
     opacity: 1;
-} 
+  }
 
-a {
+  a {
     font-size: 15px;
     text-decoration: none;
     color: black;
     padding: 10px 15px;
     transition: border 0.2s linear, color 0.2s linear;
-  
+
     @media (max-width: 1024px) {
       display: flex;
       justify-content: center;
@@ -94,7 +94,6 @@ a {
         color: #d59d82;
       }
     }
-  
-}
+  }
 `
-export default Dropdown;
+export default Dropdown
