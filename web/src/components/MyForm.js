@@ -4,7 +4,7 @@ import CircularProgress from "@material-ui/core/CircularProgress"
 import DoneOutlineIcon from "@material-ui/icons/DoneOutline"
 
 function MyForm() {
-  let [data, setData] = useState({ email: "", name: "", message: "" })
+  // let [data, setData] = useState({ email: "", name: "", message: "" })
 
   // const handleSubmit = e => {
   //   setLoading(true)
@@ -20,24 +20,24 @@ function MyForm() {
   //   })
   // }
   //
-  const handleInput = e => {
-    setData({ ...data, [e.target.name]: e.target.value })
-  }
-  const handleSubmit = e => {
-    e.preventDefault()
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...data }),
-    })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error))
-  }
+  // const handleInput = e => {
+  //   setData({ ...data, [e.target.name]: e.target.value })
+  // }
+  // const handleSubmit = e => {
+  //   e.preventDefault()
+  //   fetch("/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
+  //     body: encode({ "form-name": "contact", ...data }),
+  //   })
+  //     .then(() => alert("Success!"))
+  //     .catch(error => alert(error))
+  // }
 
   return (
     <div>
       <ContactForm
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
         name="contact"
         method={"POST"}
         data-netlify="true"
@@ -49,24 +49,24 @@ function MyForm() {
         <input
           type="text"
           name="name"
-          value={data.name}
-          onChange={handleInput}
+          // value={data.name}
+          // onChange={handleInput}
           required
         />
         <label htmlFor="email">Email:</label>
         <input
           type="email"
           name="email"
-          onChange={handleInput}
-          value={data.email}
+          // onChange={handleInput}
+          // value={data.email}
           required
         />
         <label htmlFor="message">Message:</label>
         <textarea
           type="text"
           name="message"
-          onChange={handleInput}
-          value={data.message}
+          // onChange={handleInput}
+          // value={data.message}
           required
         />
 
