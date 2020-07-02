@@ -2,20 +2,58 @@ import React from "react"
 import styled from "styled-components"
 import SEO from "../components/seo"
 import MyForm from "../components/MyForm"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 const Kontakt = () => {
+  const data = useStaticQuery(graphql`
+    query GetMap {
+      file(relativePath: { eq: "map.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <>
       <SEO title="Contact" />
       <Container>
-        <h3>Comments or inqueries?</h3>
+        <Header>
+          <h1>Kontakt</h1>
+          <p>
+            Möchten Sie den Entlebucher-Sennenhund näher kennenlernen und mehr
+            über die Rasse erfahren? Sie sind herzlich willkommen, uns in
+            unserer Zuchtstätte zu besuchen. Hier können Sie mit uns einen
+            Termin vereinbaren:{" "}
+          </p>
+        </Header>
         <MyForm />
+        <KontaktInfo>
+          <p>
+            Entlebucher-Sennenhunde von der Laughy Brigitta & Lukas Weiss-Gujer
+          </p>
+          <p>Täusistrasse 45 8630 Rüti, ZH</p>
+          <p>Handy Nr. +41 (0)76 488 38 37</p>
+        </KontaktInfo>
+        <MapImg>
+          <Img
+            fluid={data.file.childImageSharp.fluid}
+            alt="A map of where we are located"
+          />
+        </MapImg>
+        <MapsButton>Wegbeschreibung</MapsButton>
       </Container>
     </>
   )
 }
 
 const Container = styled.article`
+  margin: 0 auto;
+  max-width: 1100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,6 +62,62 @@ const Container = styled.article`
     font-weight: 400;
     margin-top: 30px;
     padding: 10px;
+  }
+`
+
+const Header = styled.div`
+  margin-top: 50px;
+  padding: 30px;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  h1 {
+    font-family: "Abhaya Libre", sans-serif;
+  }
+  p {
+    font-family: "Dosis", sans-serif;
+    max-width: 600px;
+    margin-right: 30px;
+  }
+`
+const KontaktInfo = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  p {
+    line-height: 37px;
+  }
+  p:nth-child(1) {
+    max-width: 400px;
+  }
+  p:nth-child(2) {
+    max-width: 150px;
+  }
+`
+
+const MapImg = styled.div`
+  margin-top: 70px;
+  width: 80%;
+`
+
+const MapsButton = styled.button`
+  margin: 30px auto;
+  font-family: "Dosis", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 18px;
+  padding: 10px 35px;
+  transition: all 0.3s ease-in-out;
+  background-color: #d59d82;
+  outline: none;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: black;
+    color: white;
   }
 `
 export default Kontakt
