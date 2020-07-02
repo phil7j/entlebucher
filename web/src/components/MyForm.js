@@ -5,8 +5,6 @@ import DoneOutlineIcon from "@material-ui/icons/DoneOutline"
 
 function MyForm() {
   let [data, setData] = useState({ email: "", name: "", message: "" })
-  let [isLoading, setLoading] = useState(false)
-  let [isSuccess, setSuccess] = useState(false)
 
   // const handleSubmit = e => {
   //   setLoading(true)
@@ -22,16 +20,27 @@ function MyForm() {
   //   })
   // }
   //
-  // const handleInput = e => {
-  //   setData({ ...data, [e.target.name]: e.target.value })
-  // }
+  const handleInput = e => {
+    setData({ ...data, [e.target.name]: e.target.value })
+  }
+  const handleSubmit = e => {
+    e.preventDefault()
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...data }),
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error))
+  }
 
   return (
     <div>
       <ContactForm
-        /*onSubmit={handleSubmit}*/ name="contact"
-        method={"post"}
-        netlify
+        onSubmit={handleSubmit}
+        name="contact"
+        method={"POST"}
+        data-netlify="true"
         data-netlify-honeypot={"bot-field"}
       >
         <input type="hidden" name={"bot-field"} />
@@ -40,35 +49,28 @@ function MyForm() {
         <input
           type="text"
           name="name"
-          /*
           value={data.name}
           onChange={handleInput}
-           */
           required
         />
         <label htmlFor="email">Email:</label>
         <input
           type="email"
           name="email"
-          /*
           onChange={handleInput}
           value={data.email}
-           */
           required
         />
         <label htmlFor="message">Message:</label>
         <textarea
           type="text"
           name="message"
-          /*
           onChange={handleInput}
           value={data.message}
-
-           */
           required
         />
 
-        <SubmitButton type={"submit"} value={"Send Message"} />
+        <SubmitButton type={"submit"}>Send</SubmitButton>
         {/*<Loading>*/}
         {/*  {isLoading ? (*/}
         {/*    <CircularProgress />*/}
@@ -110,7 +112,7 @@ const ContactForm = styled.form`
 `
 const Loading = styled.div``
 
-const SubmitButton = styled.input`
+const SubmitButton = styled.button`
   margin: 10px auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
