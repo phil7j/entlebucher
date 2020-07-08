@@ -20,7 +20,7 @@ const Kontakt = () => {
 
   return (
     <>
-      <SEO title="Contact" />
+      <SEO title="Kontakt" />
       <Container>
         <Header>
           <h1>Kontakt</h1>
@@ -45,7 +45,11 @@ const Kontakt = () => {
             alt="A map of where we are located"
           />
         </MapImg>
-        <MapsButton>Wegbeschreibung</MapsButton>
+        <MapsButton>
+          <a href={"https://goo.gl/maps/VRZKeGC3nF8cC1YGA"} target={"_blank"}>
+            Wegbeschreibung
+          </a>
+        </MapsButton>
       </Container>
     </>
   )
@@ -74,6 +78,7 @@ const Header = styled.div`
   flex-wrap: wrap;
   justify-content: space-around;
   h1 {
+    letter-spacing: 2px;
     font-family: "Abhaya Libre", sans-serif;
   }
   p {
@@ -114,10 +119,16 @@ const MapsButton = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
-
+  a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.3s ease-in-out;
+  }
   &:hover {
     background-color: black;
-    color: white;
+    a {
+      color: white;
+    }
   }
 `
 export default Kontakt

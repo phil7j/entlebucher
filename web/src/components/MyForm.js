@@ -34,10 +34,12 @@ const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  letter-spacing: 1px;
   label {
     font-size: 25px;
     min-width: 350px;
     margin-top: 25px;
+    margin-bottom: 5px;
   }
   input {
     border: 3px solid #d9d9d9;
