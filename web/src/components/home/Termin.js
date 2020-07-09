@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Termin = () => {
   const data = useStaticQuery(graphql`
@@ -45,7 +45,9 @@ const Termin = () => {
         </h2>
 
         <p>Sie können uns gerne in unserer Zuchtstätte besuchen!</p>
-        <Button>Termin vereinbaren</Button>
+        <Link to={"/kontakt"}>
+          <Button>Termin vereinbaren</Button>
+        </Link>
       </Content>
       <BottomContent>
         <ImgContainer>
@@ -112,6 +114,9 @@ const Content = styled.div`
     margin: 35px 0;
     text-align: center;
   }
+  a {
+    text-decoration: none;
+  }
 `
 
 const ImgContainer = styled.div`
@@ -145,6 +150,7 @@ const Button = styled.div`
   cursor: pointer;
   margin: 25px auto;
   box-shadow: 10px 10px 20px 0px rgba(50, 50, 50, 0.5);
+  color: black;
   &:hover {
     color: white;
     background-color: black;

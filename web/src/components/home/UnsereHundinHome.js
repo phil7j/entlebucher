@@ -1,9 +1,9 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
-const UnsereHundin = () => {
+const UnsereHundinHome = () => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "unsere-hundin.jpg" }) {
@@ -25,11 +25,16 @@ const UnsereHundin = () => {
           Unsere<span> Hündin</span>
         </h2>
         <Subtitle>Pepper Halla von der Haslere</Subtitle>
-        <p>
-          Pepper sjkfsöldkfjsöldkjf Sie hat am 05.10.2019 in Zofingen die
-          Ankörung des SKES bestanden!
-        </p>
-        <Button>Streckbrief</Button>
+        <Description>
+          <p>Pepper Halla von der Haslere (FCI):</p>{" "}
+          <p>Geboren am 13.03.2017 in Aeschi b. Spiez</p>{" "}
+          <p>Mutter: Riana von der Auenrüti </p>
+          <p>Vater: Giro vom Bogenthal</p>
+          <p>Pepper hat am 05.10.2019 die Ankörung des SKES bestanden!</p>
+        </Description>
+        <Link to={"/unserehuendin"}>
+          <Button>Streckbrief</Button>
+        </Link>
       </Content>
     </Container>
   )
@@ -55,18 +60,27 @@ const Content = styled.div`
     letter-spacing: 1px;
     font-family: "Abhaya Libre";
     font-weight: 500;
-    text-align: center;
     span {
       letter-spacing: 1px;
       font-style: italic;
     }
   }
+
+  a {
+    text-decoration: none;
+  }
+`
+const Description = styled.div`
+  margin: 25px 0;
   p {
     font-family: "Dosis";
     max-width: 300px;
-    font-size: 15px;
-    margin-top: 35px;
-    text-align: center;
+    font-size: 18px;
+    margin: 0;
+    line-height: 28px;
+  }
+  p:last-child {
+    margin-top: 15px;
   }
 `
 
@@ -93,8 +107,8 @@ const Button = styled.div`
   border: 1px solid #d59d82;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-  margin: 0 auto;
   box-shadow: 10px 10px 20px 0px rgba(50, 50, 50, 0.5);
+  color: black;
   &:hover {
     color: white;
     background-color: black;
@@ -102,4 +116,4 @@ const Button = styled.div`
   }
 `
 
-export default UnsereHundin
+export default UnsereHundinHome

@@ -12,7 +12,7 @@ const Header = () => {
   let links = [
     {
       text: "Unsere Hündin",
-      to: "/about",
+      to: "/unserehundin",
       type: "dropdown",
       nestedLinks: [
         { text: "Steckbrief", to: "/steckbrief" },

@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const WelpenZucht = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +27,9 @@ const WelpenZucht = () => {
           Sennenhunde gibt Ihnen gerne Auskunft über die zu vermittelnden Welpen
           in der Schweiz.
         </p>
-        <Button>Welpenvermittlung SKES</Button>
+        <Link to={"https://www.entlebuchersennenhunde.ch/welpenvermittlung"}>
+          <Button>Welpenvermittlung SKES</Button>
+        </Link>
       </Content>
       <ImgContainer>
         <Img fluid={data.file.childImageSharp.fluid} alt="Pepper as a baby" />
@@ -51,12 +53,12 @@ const Content = styled.div`
   align-content: center;
   justify-content: center;
   padding: 20px;
+  max-width: 340px;
   h2 {
     font-size: 35px;
     letter-spacing: 1px;
     font-family: "Abhaya Libre";
     font-weight: 500;
-    text-align: center;
     span {
       letter-spacing: 1px;
       font-style: italic;
@@ -65,9 +67,11 @@ const Content = styled.div`
   p {
     font-family: "Dosis";
     max-width: 300px;
-    font-size: 15px;
+    font-size: 18px;
     margin-top: 35px;
-    text-align: center;
+  }
+  a {
+    text-decoration: none;
   }
 `
 
@@ -76,7 +80,7 @@ const Subtitle = styled.div`
   font-family: "Dosis", sans-serif;
   letter-spacing: 1px;
   font-size: 25px;
-  text-align: center;
+  white-space: nowrap;
 `
 const ImgContainer = styled.div`
   width: 55%;
@@ -94,8 +98,9 @@ const Button = styled.div`
   border: 1px solid #d59d82;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-  margin: 0 auto;
   box-shadow: 10px 10px 20px 0px rgba(50, 50, 50, 0.5);
+  color: black;
+  margin-bottom: 20px;
   &:hover {
     color: white;
     background-color: black;
