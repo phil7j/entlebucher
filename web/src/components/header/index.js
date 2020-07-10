@@ -16,7 +16,7 @@ const Header = () => {
       type: "dropdown",
       nestedLinks: [
         { text: "Steckbrief", to: "/steckbrief" },
-        { text: "Pepper's Zuhause", to: "/zuhause" },
+        { text: "Pepper's Zuhause", to: "/pepperszuhause" },
       ],
     },
     {

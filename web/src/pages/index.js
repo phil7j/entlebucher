@@ -2,7 +2,7 @@ import React from "react"
 import SEO from "../components/seo"
 import styled from "styled-components"
 import Jumbotron from "../components/home/Jumbotron"
-import UberUns from "../components/home/UberUns"
+import UberUnsHome from "../components/home/UberUnsHome"
 import UnsereHundinHome from "../components/home/UnsereHundinHome"
 import Welpenzucht from "../components/home/Welpenzucht"
 import Termin from "../components/home/Termin"
@@ -12,7 +12,7 @@ const IndexPage = () => {
     <Container>
       <SEO title="Home" />
       <Jumbotron />
-      <UberUns />
+      <UberUnsHome />
       <UnsereHundinHome />
       <Welpenzucht />
       <Termin />
