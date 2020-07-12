@@ -120,7 +120,7 @@ const Button = styled.div`
   border: 1px solid #d59d82;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-  box-shadow: 10px 10px 20px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 5px 5px 20px 0px rgba(50, 50, 50, 0.5);
   color: black;
   &:hover {
     color: white;
