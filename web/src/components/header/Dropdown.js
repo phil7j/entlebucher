@@ -12,7 +12,11 @@ const Dropdown = props => {
       </DropdownBtn>
       <DropdownContent>
         {props.nestedLinks !== undefined
-          ? props.nestedLinks.map(link => <Link to={link.to}>{link.text}</Link>)
+          ? props.nestedLinks.map(link => (
+              <Link to={link.to} onClick={() => props.setOpen(false)}>
+                {link.text}
+              </Link>
+            ))
           : null}
       </DropdownContent>
     </DropdownContainer>

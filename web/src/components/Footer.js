@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -37,10 +37,10 @@ const Footer = () => {
         </Credit>
       </LeftSection>
       <RightSection>
-        <a href="">Unsere Hündin</a>
-        <a href="">Welpenzucht</a>
-        <a href="">Kontakt</a>
-        <a href="">naVita Produkte</a>
+        <Link to={"/unserehuendin"}>Unsere Hündin</Link>
+        <Link to={"/unserehuendin"}>Welpenzucht</Link>
+        <Link to={"/unserehuendin"}>naVita Produkte</Link>
+        <Link to={"/kontakt"}>Kontakt</Link>
       </RightSection>
     </Container>
   )

@@ -1,35 +1,35 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
 const Termin = () => {
   const data = useStaticQuery(graphql`
     query Termin {
       termin1: file(relativePath: { eq: "termin1.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
       termin2: file(relativePath: { eq: "termin2.JPG" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
       termin3: file(relativePath: { eq: "termin3.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
       termin4: file(relativePath: { eq: "termin4.jpeg" }) {
         childImageSharp {
-          fluid(maxWidth: 300) {
+          fluid(maxWidth: 400) {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
@@ -45,7 +45,9 @@ const Termin = () => {
         </h2>
 
         <p>Sie können uns gerne in unserer Zuchtstätte besuchen!</p>
-        <Button>Termin vereinbaren</Button>
+        <Link to={"/kontakt"}>
+          <Button>Termin vereinbaren</Button>
+        </Link>
       </Content>
       <BottomContent>
         <ImgContainer>
@@ -82,7 +84,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: #d59d82;
-  padding: 30px 20px;
 `
 
 const Content = styled.div`
@@ -90,7 +91,8 @@ const Content = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 80px 20px;
+
   color: white;
   h2 {
     font-size: 27px;
@@ -112,24 +114,21 @@ const Content = styled.div`
     margin: 35px 0;
     text-align: center;
   }
+  a {
+    text-decoration: none;
+  }
 `
 
 const ImgContainer = styled.div`
-  width: 250px;
-  height: 220px;
-  max-width: 350px;
-  overflow: hidden;
-  padding-top: 15px;
-  @media (max-width: 540px) {
-    width: 150px;
-    height: 150px;
-  }
+  width: 24%;
 `
 const BottomContent = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  background: white;
+  padding: 30px 40px;
 `
 
 const Button = styled.div`
@@ -143,8 +142,9 @@ const Button = styled.div`
   border: 1px solid #d59d82;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-  margin: 25px auto;
+  margin: 25px auto 0 auto;
   box-shadow: 10px 10px 20px 0px rgba(50, 50, 50, 0.5);
+  color: black;
   &:hover {
     color: white;
     background-color: black;

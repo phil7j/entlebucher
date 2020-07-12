@@ -5,7 +5,9 @@ import styled from "styled-components"
 const ContactLink = props => {
   return (
     <NavItem>
-      <Link to={props.to}>{props.text}</Link>
+      <Link to={props.to} onClick={() => props.setOpen(false)}>
+        {props.text}
+      </Link>
     </NavItem>
   )
 }
@@ -33,7 +35,7 @@ const NavItem = styled.div`
     font-size: 15px;
     text-decoration: none;
     color: black;
-    padding: 10px 15px;
+    padding: 10px 20px;
     @media (max-width: 1024px) {
       font-size: 26px;
       font-weight: 500;
