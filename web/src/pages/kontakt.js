@@ -80,6 +80,7 @@ const Header = styled.div`
   h1 {
     letter-spacing: 2px;
     font-family: "Abhaya Libre", sans-serif;
+    text-align: left;
   }
   p {
     font-family: "Dosis", sans-serif;

@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Jumbotron from "../components/home/Jumbotron"
 import UberUnsHome from "../components/home/UberUnsHome"
 import UnsereHundinHome from "../components/home/UnsereHundinHome"
-import Welpenzucht from "../components/home/Welpenzucht"
+import WelpenzuchtHome from "../components/home/WelpenzuchtHome"
 import Termin from "../components/home/Termin"
 
 const IndexPage = () => {
@@ -14,7 +14,7 @@ const IndexPage = () => {
       <Jumbotron />
       <UberUnsHome />
       <UnsereHundinHome />
-      <Welpenzucht />
+      <WelpenzuchtHome />
       <Termin />
     </Container>
   )

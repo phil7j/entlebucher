@@ -16,36 +16,42 @@ const UnsereHundinHome = () => {
     }
   `)
   return (
-    <Container>
-      <ImgContainer>
-        <Img fluid={data.file.childImageSharp.fluid} alt="A dog paw" />
-      </ImgContainer>
-      <Content>
-        <h2>
-          Unsere<span> Hündin</span>
-        </h2>
-        <Subtitle>Pepper Halla von der Haslere</Subtitle>
-        <Description>
-          <p>Pepper Halla von der Haslere (FCI):</p>{" "}
-          <p>Geboren am 13.03.2017 in Aeschi b. Spiez</p>{" "}
-          <p>Mutter: Riana von der Auenrüti </p>
-          <p>Vater: Giro vom Bogenthal</p>
-          <p>Pepper hat am 05.10.2019 die Ankörung des SKES bestanden!</p>
-        </Description>
-        <Link to={"/unserehuendin"}>
-          <Button>Streckbrief</Button>
-        </Link>
-      </Content>
-    </Container>
+    <Background>
+      <Container>
+        <ImgContainer>
+          <Img fluid={data.file.childImageSharp.fluid} alt="A dog paw" />
+        </ImgContainer>
+        <Content>
+          <h2>
+            Unsere<span> Hündin</span>
+          </h2>
+          <Subtitle>Pepper Halla von der Haslere</Subtitle>
+          <Description>
+            <p>Pepper Halla von der Haslere (FCI):</p>{" "}
+            <p>Geboren am 13.03.2017 in Aeschi b. Spiez</p>{" "}
+            <p>Mutter: Riana von der Auenrüti </p>
+            <p>Vater: Giro vom Bogenthal</p>
+            <p>Pepper hat am 05.10.2019 die Ankörung des SKES bestanden!</p>
+          </Description>
+          <Link to={"/steckbrief"}>
+            <Button>Streckbrief</Button>
+          </Link>
+        </Content>
+      </Container>
+    </Background>
   )
 }
-
+const Background = styled.div`
+  width: 100%;
+  background: #fdf6f1;
+`
 const Container = styled.div`
   width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  background: #fdf6f1;
   padding: 30px 20px;
 `
 
@@ -95,6 +101,7 @@ const ImgContainer = styled.div`
   width: 55%;
   max-width: 500px;
   margin-bottom: 15px;
+  min-width: 350px;
 `
 
 const Button = styled.div`

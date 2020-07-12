@@ -5,7 +5,9 @@ import styled from "styled-components"
 const ContactLink = props => {
   return (
     <NavItem>
-      <Link to={props.to}>{props.text}</Link>
+      <Link to={props.to} onClick={() => props.setOpen(false)}>
+        {props.text}
+      </Link>
     </NavItem>
   )
 }

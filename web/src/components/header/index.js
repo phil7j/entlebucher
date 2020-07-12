@@ -24,7 +24,7 @@ const Header = () => {
       link: "/projects",
       type: "dropdown",
       nestedLinks: [
-        { text: "Zuchtstätte", to: "/zuchtstatte" },
+        { text: "Zuchtstätte", to: "/zuchtstaette" },
         { text: "Welpen", to: "/welpen" },
       ],
     },
@@ -35,6 +35,7 @@ const Header = () => {
   return (
     <>
       <Container>
+        {console.log(open)}
         <Logo setOpen={setOpen} />
         <Hamburger open={open} onClick={() => setOpen(!open)} />
         <Nav open={open}>
@@ -44,11 +45,12 @@ const Header = () => {
                 to={link.to}
                 text={link.text}
                 nestedLinks={link.nestedLinks}
+                setOpen={setOpen}
               />
             ) : link.type === "normal" ? (
-              <NormalLink to={link.to} text={link.text} />
+              <NormalLink to={link.to} text={link.text} setOpen={setOpen} />
             ) : (
-              <ContactLink to={link.to} text={link.text} />
+              <ContactLink to={link.to} text={link.text} setOpen={setOpen} />
             )
           )}
         </Nav>

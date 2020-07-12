@@ -40,15 +40,15 @@ const PeppersZuhause = () => {
 
   return (
     <>
-      <SEO title="Unsere Hündin" />
+      <SEO title="Pepper's Zuhause" />
       <TopHalf>
         <Container>
           <LeftColumn>
             <div>
               <h1>
-                Unsere <span>Hündin</span>
+                Pepper's <span>Zuhause</span>
               </h1>
-              <h4>Hallo, ich bin Pepper!</h4>
+              <h4>Willkommen im Zürcher Oberland!</h4>
             </div>
             <ImageContainer>
               <Img fluid={data.family.childImageSharp.fluid} />
@@ -57,17 +57,16 @@ const PeppersZuhause = () => {
           <RightColumn>
             <div>
               <p>
-                Ich bin meinem Herrchen und Frauchen gegenüber sehr anhänglich
-                und folgsam. Im Haus verhalte ich mich ruhig und belle nur kurz
-                wenn die Hausglocke läutet. Ich liebe es neue Tricks zu lernen
-                und mich im Garten beim Spiel auszutoben. Anderen Menschen
-                gegenüber bin ich eher zurückhalten, freue mich aber riesig über
-                ein bekanntes Gesicht.
+                Wir wohnen im schönen Zürcher Oberland am Dorfrand in Rüti in
+                einem ruhigen Quartier. Pepper begleitet uns (fast) überall hin.
+                Sie ist sich an Kühe, Pferde, Schafe, Hühner, Katzen usw.
+                gewöhnt, da wir auf unseren Spaziergängen ihnen täglich
+                begegnen.
               </p>
               <p>
-                Der Zuchtverband hat mir über mein Aussehen und Verhalten
-                Bestnoten gegeben. Ausgedehnte Spaziergänge und anspruchsvolle
-                Wanderungen gehören zu meinen Lieblingsbeschäftigungen.{" "}
+                Wir sind Mitglieder des Schweizerischen Klubs für
+                Entlebucher-Sennenhunde und züchten rassenreine Welpen mit
+                FCI-Abstammungsurkunde
               </p>
             </div>
 
@@ -152,7 +151,8 @@ const RightColumn = styled.div`
 const ImageContainer = styled.div`
   width: 100%;
   max-width: 580px;
-  margin: 10px 0;
+  margin: 5px 0;
+  padding: 0 5px;
   img {
     min-height: 339px;
     max-height: 339px;

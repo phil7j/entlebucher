@@ -85,7 +85,7 @@ const Heading = styled.div`
       align-self: flex-end;
     }
   }
-  @media (max-width: 400px) {
+  @media (max-width: 700px) {
     top: 0;
     bottom: 900px;
     position: sticky;
