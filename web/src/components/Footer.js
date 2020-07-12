@@ -37,9 +37,9 @@ const Footer = () => {
         </Credit>
       </LeftSection>
       <RightSection>
-        <Link to={"/unserehuendin"}>Unsere Hündin</Link>
-        <Link to={"/unserehuendin"}>Welpenzucht</Link>
-        <Link to={"/unserehuendin"}>naVita Produkte</Link>
+        <Link to={"/steckbrief"}>Unsere Hündin</Link>
+        <Link to={"/welpen"}>Welpenzucht</Link>
+        <Link to={"/navita"}>naVita Produkte</Link>
         <Link to={"/kontakt"}>Kontakt</Link>
       </RightSection>
     </Container>
@@ -48,14 +48,16 @@ const Footer = () => {
 
 const Container = styled.div`
   width: 100%;
-  //min-height: 200px;
-  //padding: 2%;
+  padding: 20px 10px 15px 10px;
   background-color: #fdf6f1;
   display: flex;
   justify-content: space-around;
 `
 const LogoImg = styled.div`
   width: 100px;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 const Title = styled.div`
   display: flex;
@@ -63,7 +65,7 @@ const Title = styled.div`
   p {
     font-family: "Abhaya Libre";
     margin: 0;
-    max-width: 210px;
+    max-width: 205px;
     span {
       font-style: italic;
     }
@@ -90,6 +92,13 @@ const LeftSection = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
+  @media (max-width: 1024px) {
+    align-items: flex-start;
+    a {
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
 `
 const RightSection = styled.div`
   display: flex;

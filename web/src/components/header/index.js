@@ -67,6 +67,7 @@ const Hamburger = styled(MenuIcon)`
   box-sizing: content-box;
   z-index: 101;
   color: #d59d82;
+  cursor: pointer;
   &:hover {
     color: black;
   }
@@ -83,10 +84,11 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 20px;
-  z-index: 102;
+  z-index: 98;
   font-family: "Dosis", sans-serif;
   font-weight: 500;
   padding: 0 20px;
+  overflow: hidden;
   @media (max-width: 1024px) {
     justify-content: space-between;
   }
@@ -101,16 +103,19 @@ const Nav = styled.div`
   transition: background 0.5s linear, color 0.5s linear;
   @media (max-width: 1024px) {
     transition: right 0.3s linear;
-    position: absolute;
+    position: fixed;
     top: 0;
 
     right: ${props => (props.open ? "0" : "-1300px")};
-    height: 100%;
+    //display: ${props => (props.open ? "flex" : "none")};
+    height: 100vh;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
     z-index: 99;
+    overflow: auto;
+    
   }
 `
 

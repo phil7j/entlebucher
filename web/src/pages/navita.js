@@ -3,7 +3,6 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import SEO from "../components/seo"
-import Termin from "../components/home/Termin"
 
 const Navita = () => {
   const data = useStaticQuery(graphql`
@@ -41,41 +40,108 @@ const Navita = () => {
   return (
     <>
       <SEO title="Welpen" />
-      <Background>
-        <Container>
-          <ImgContainer>
-            <Img fluid={data.navita.childImageSharp.fluid} alt="Navita Logo" />
-          </ImgContainer>
-          <Content>
-            <Description>
-              <p>
-                naVita bietet uns die beste & natürlichste Tiernahrung für
-                unsere Hündin und den Welpen an:
-              </p>{" "}
-              <p>
-                <ImgContainer></ImgContainer>
-              </p>
-            </Description>
-            <a
-              href="https://www.entlebuchersennenhunde.ch/welpenvermittlung"
-              target={"_blank"}
-            >
-              <Button>SKES</Button>
+      <FirstRow>
+        <ImgContainer>
+          <Img fluid={data.navita.childImageSharp.fluid} alt="Navita Logo" />
+        </ImgContainer>
+        <Content>
+          <FirstDescription>
+            <p>
+              naVita bietet uns die beste & natürlichste Tiernahrung für unsere
+              Hündin und den Welpen an:
+            </p>
+            <p>
+              <Check>
+                {" "}
+                <Img
+                  fluid={data.check.childImageSharp.fluid}
+                  alt="Navita Logo"
+                />
+              </Check>
+              durchschnittlich 70% Fleisch- & Fischanteil
+            </p>
+            <p>
+              <Check>
+                {" "}
+                <Img
+                  fluid={data.check.childImageSharp.fluid}
+                  alt="Navita Logo"
+                />
+              </Check>
+              von Ernährungsfachleuten entwickelt
+            </p>
+            <p>
+              <Check>
+                {" "}
+                <Img
+                  fluid={data.check.childImageSharp.fluid}
+                  alt="Navita Logo"
+                />
+              </Check>
+              frei von jeglichen Zusatzstoffen
+            </p>
+          </FirstDescription>
+        </Content>
+      </FirstRow>
+      <SecondRow>
+        <ImgContainer>
+          <Img
+            fluid={data.catDog.childImageSharp.fluid}
+            alt="Picture of Cat and Dog"
+          />
+        </ImgContainer>
+        <Content>
+          <SecondDescription>
+            <Subtitle>
+              registrieren & <span>bestellen</span>
+            </Subtitle>
+            <p>Hier geht es zur Registrierung & Bestellung:</p>
+            <a href="https://tiernahrung.navita.ch/de/" target={"_blank"}>
+              <Button>naVita Website</Button>
             </a>
-          </Content>
-        </Container>
-      </Background>
-      <Termin />
+          </SecondDescription>
+        </Content>
+      </SecondRow>
+      <BottomContainer>
+        <BottomImage>
+          <Img
+            fluid={data.animals.childImageSharp.fluid}
+            alt="Picture of Animals"
+          />
+        </BottomImage>
+        <ThirdDescription>
+          <h3>
+            Suchen Sie die <span>optimalste</span> Tiernahrung für Ihren{" "}
+            <span>neuen</span> Welpen?
+          </h3>
+          <p>
+            Gerne stehe ich, Brigitta Weiss, Ihnen als Tiernahrungsberaterin von
+            naVita zur Verfügung.
+          </p>
+          <a
+            href={"https://tiernahrung.navita.ch/de/contactvendor"}
+            target={"_blank"}
+          >
+            <Button>Kontakt</Button>
+          </a>
+        </ThirdDescription>
+      </BottomContainer>
     </>
   )
 }
-const Background = styled.div`
+
+const FirstRow = styled.div`
   width: 100%;
-  background: #fdf6f1;
+  max-width: 1200px;
+  margin: 30px auto 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px 20px;
 `
-const Container = styled.div`
+const SecondRow = styled.div`
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
@@ -88,11 +154,11 @@ const Content = styled.div`
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  padding: 20px;
+  margin: 0 15px;
   h2 {
     font-size: 35px;
     letter-spacing: 1px;
-    font-family: "Abhaya Libre";
+    font-family: "Abhaya Libre", sans-serif;
     font-weight: 500;
     span {
       letter-spacing: 1px;
@@ -104,46 +170,106 @@ const Content = styled.div`
     text-decoration: none;
   }
 `
-const Description = styled.div`
-  margin: 25px 0;
+const FirstDescription = styled.div`
+  width: 425px;
   p {
     font-family: "Dosis";
     max-width: 400px;
     font-size: 18px;
-    margin: 0;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+  }
+  p:first-child {
+    margin-bottom: 25px;
+  }
+`
+const SecondDescription = styled.div`
+  width: 425px;
+  p {
+    font-family: "Dosis";
+    max-width: 400px;
+    font-size: 18px;
+    margin: 0 0 20px 0;
+    display: flex;
+    align-items: center;
+  }
+`
+const ThirdDescription = styled.div`
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  h3 {
+    font-family: "Abhaya Libre", sans-serif;
+    letter-spacing: 2px;
+  }
+  span {
+    font-style: italic;
+  }
+  p {
+    font-family: "Dosis", sans-serif;
+    letter-spacing: 1px;
+  }
+  a {
+    text-decoration: none;
   }
 `
 
 const Subtitle = styled.div`
-  color: #d59d82;
-  font-family: "Dosis", sans-serif;
+  font-family: "Abhaya Libre", sans-serif;
   letter-spacing: 1px;
-  font-size: 25px;
+  font-size: 35px;
+  margin-bottom: 40px;
+  span {
+    font-style: italic;
+  }
 `
 const ImgContainer = styled.div`
-  width: 55%;
+  width: 25%;
   max-width: 500px;
   margin-bottom: 15px;
   min-width: 350px;
+`
+const Check = styled.div`
+  width: 32px;
+  margin-right: 10px;
 `
 
 const Button = styled.div`
   display: flex;
   justify-content: center;
   font-family: "Dosis", sans-serif;
-  background-color: #d59d82;
+  background-color: #a0ac0f;
+  letter-spacing: 1px;
   width: 150px;
   padding: 10px 0;
-  border: 1px solid #d59d82;
   transition: all 0.5s ease-in-out;
+  box-shadow: 5px 5px 20px 0px rgba(50, 50, 50, 0.5);
   cursor: pointer;
-  box-shadow: 10px 10px 20px 0px rgba(50, 50, 50, 0.5);
   color: black;
   &:hover {
     color: white;
     background-color: black;
-    border: 1px solid white;
   }
+`
+
+const BottomContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  align-items: center;
+  margin: 0 auto;
+  padding: 25px;
+`
+const BottomImage = styled.div`
+  width: 80%;
+  max-width: 900px;
+  min-width: 150px;
+  margin: 75px 20px;
 `
 
 export default Navita

@@ -42,6 +42,7 @@ const Container = styled.main`
     "header"
     "main-content"
     "footer";
+  overflow: hidden;
 `
 
 export default Layout

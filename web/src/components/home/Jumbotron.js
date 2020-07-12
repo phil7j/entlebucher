@@ -55,33 +55,36 @@ const Heading = styled.div`
   flex-direction: column;
   color: black;
   z-index: 2;
-  left: 8%;
-  top: 15%;
+  left: 18%;
+  top: 25%;
   h1 {
     span {
       font-style: italic;
     }
     font-family: "Abhaya Libre";
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: 1px;
   }
   h2 {
     font-family: "Abhaya Libre";
     align-self: flex-end;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 1px;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: 1370px) {
+    top: 150px;
+    left: 100px;
+  }
+  @media (max-width: 1090px) {
     justify-content: space-between;
-    //position: relative;
-    top: 50px;
-    left: 10px;
+    top: 80px;
+    left: 70px;
     h1 {
-      font-size: 25px;
+      font-size: 30px;
       align-self: center;
     }
     h2 {
-      font-size: 20px;
+      font-size: 25px;
       align-self: flex-end;
     }
   }

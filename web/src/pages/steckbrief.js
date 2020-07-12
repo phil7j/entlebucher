@@ -201,6 +201,7 @@ const RasseButton = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+  box-shadow: 5px 5px 20px 0px rgba(50, 50, 50, 0.5);
   a {
     text-decoration: none;
     color: black;

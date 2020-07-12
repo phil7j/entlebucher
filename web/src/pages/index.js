@@ -22,7 +22,9 @@ const IndexPage = () => {
 
 const Container = styled.div`
   display: grid;
-  grid-template-rows: fit-content(1fr) 1fr 1fr 1fr 1fr;
+  grid-template-rows:
+    fit-content(1fr) fit-content(1fr) fit-content(1fr) fit-content(1fr)
+    fit-content(1fr);
   grid-template-areas:
     "Jumbotron"
     "UberUns"

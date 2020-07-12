@@ -65,7 +65,7 @@ const Zuchtstaette = () => {
             <TopDescription>
               <p>
                 Unsere Welpen werden in einer speziellen Wurfkiste im Wohnzimmer
-                geboren und wachsen im Haus und im Garten auf.Wir gewöhnen Sie
+                geboren und wachsen im Haus und im Garten auf. Wir gewöhnen Sie
                 an die Leine, andere Menschen & Autos. Sie entdecken spielerisch
                 ihre Umwelt und geniessen unsere liebevolle Pflege und
                 Aufmerksamkeit, bis sie mit ca. 10 Wochen entwurmt, geimpft und
@@ -231,6 +231,7 @@ const Button = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
+  box-shadow: 5px 5px 20px 0px rgba(50, 50, 50, 0.5);
 
   &:hover {
     background-color: black;
