@@ -84,7 +84,7 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   margin-bottom: 20px;
-  z-index: 98;
+  z-index: 6;
   font-family: "Dosis", sans-serif;
   font-weight: 500;
   padding: 0 20px;
@@ -107,15 +107,13 @@ const Nav = styled.div`
     top: 0;
 
     right: ${props => (props.open ? "0" : "-1300px")};
-    //display: ${props => (props.open ? "flex" : "none")};
     height: 100vh;
     flex-direction: column;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
-    z-index: 99;
+    z-index: 5;
     overflow: auto;
-    
   }
 `
 

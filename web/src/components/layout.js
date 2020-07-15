@@ -36,8 +36,8 @@ const Main = styled.main`
   /* height: 100%; */
 `
 const Container = styled.main`
-  display: grid;
-  grid-template-rows: 100px auto auto;
+  //display: grid;
+  grid-template-rows: auto auto auto;
   grid-template-areas:
     "header"
     "main-content"
