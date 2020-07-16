@@ -29,7 +29,6 @@ const Welpen = () => {
             <h2>
               Suchen Sie einen Entlebucher <span>Welpen?</span>
             </h2>
-            <Subtitle>Pepper Halla von der Haslere</Subtitle>
             <Description>
               <p>
                 Wir erwarten unseren ersten Wurf im September 2020. Bitte wenden
@@ -88,7 +87,7 @@ const Content = styled.div`
   }
 `
 const Description = styled.div`
-  margin: 25px 0;
+  margin: 20px 0;
   p {
     font-family: "Dosis";
     max-width: 400px;

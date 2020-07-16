@@ -19,12 +19,14 @@ const Footer = () => {
     <Container>
       <LeftSection>
         <Title>
-          <LogoImg>
-            <Img
-              fluid={data.file.childImageSharp.fluid}
-              alt="A laughing cartoon of an Entlebucher"
-            />
-          </LogoImg>
+          <Link to={"/"}>
+            <LogoImg>
+              <Img
+                fluid={data.file.childImageSharp.fluid}
+                alt="A laughing cartoon of an Entlebucher"
+              />
+            </LogoImg>
+          </Link>
           <p>
             Entlebucher-<span>Sennenhunde </span>
             von der Laughy
@@ -81,7 +83,7 @@ const Credit = styled.div`
     transition: all 0.3s ease-in-out;
     &:hover {
       color: #d59d82;
-      font-size: 16px;
+      //font-size: 15px;
     }
   }
 `

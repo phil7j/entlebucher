@@ -61,11 +61,15 @@ const Container = styled.article`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 15px;
   h3 {
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto;
     font-weight: 400;
     margin-top: 30px;
     padding: 10px;
+  }
+  @media (max-width: 834px) {
+    align-items: center;
   }
 `
 
@@ -77,6 +81,9 @@ const Header = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  @media (max-width: 834px) {
+    justify-content: flex-start;
+  }
   h1 {
     letter-spacing: 2px;
     font-family: "Abhaya Libre", sans-serif;
@@ -124,6 +131,7 @@ const MapsButton = styled.button`
   padding: 10px 35px;
   transition: all 0.3s ease-in-out;
   background-color: #d59d82;
+  box-shadow: 5px 5px 20px 0px rgba(50, 50, 50, 0.5);
   outline: none;
   border: none;
   cursor: pointer;
