@@ -163,7 +163,8 @@ const AdditionalPics = styled.div`
     font-family: "Dosis", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    margin: 15px;
+    margin: 0;
+    padding: 0 0 5px 5px;
   }
   div.column {
     width: 45%;
@@ -173,7 +174,7 @@ const AdditionalPics = styled.div`
     align-self: flex-end;
   }
 
-  margin: 0 auto;
+  margin: 5px auto;
   max-width: 1400px;
   display: flex;
   justify-content: center;

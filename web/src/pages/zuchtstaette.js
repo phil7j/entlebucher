@@ -83,7 +83,7 @@ const Zuchtstaette = () => {
         </Container>
         <AdditionalPics>
           <div className={"column"}>
-            <h6>Need photos from peppers puppies here instead ...?</h6>
+            <h6>Pepper as Welpe</h6>
             <ImageContainer>
               <Img fluid={data.zuchtstaette3.childImageSharp.fluid} />
             </ImageContainer>
