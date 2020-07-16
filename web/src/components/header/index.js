@@ -81,7 +81,7 @@ const Hamburger = styled(MenuIcon)`
 
 const Container = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
   z-index: 6;
@@ -98,20 +98,19 @@ const Nav = styled.div`
   display: flex;
   justify-content: flex-end;
   background: white;
-  max-width: 960px;
   opacity: 1;
   transition: background 0.5s linear, color 0.5s linear;
   @media (max-width: 1024px) {
     transition: right 0.3s linear;
     position: fixed;
     top: 0;
-
+    margin-top: 30px;
     right: ${props => (props.open ? "0" : "-1300px")};
     height: 100vh;
     flex-direction: column;
     width: 100%;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     z-index: 5;
     overflow: auto;
   }

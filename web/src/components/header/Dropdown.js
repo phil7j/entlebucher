@@ -27,6 +27,7 @@ const DropdownContainer = styled.div`
   cursor: pointer;
   height: 100%;
   @media (max-width: 1024px) {
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,7 +53,6 @@ const DropdownBtn = styled.div`
     font-size: 26px;
     padding-bottom: 15px;
     border-bottom: 1px solid black;
-    margin-bottom: 15px;
   }
 `
 
@@ -92,7 +92,7 @@ const DropdownContent = styled.div`
       font-size: 19px;
       height: 100%;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 5px;
       &:hover {
         border-left: 3px solid #d59d82;
         color: #d59d82;

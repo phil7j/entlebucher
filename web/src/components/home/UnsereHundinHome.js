@@ -95,13 +95,12 @@ const Subtitle = styled.div`
   font-family: "Dosis", sans-serif;
   letter-spacing: 1px;
   font-size: 25px;
-  text-align: center;
 `
 const ImgContainer = styled.div`
   width: 55%;
   max-width: 500px;
   margin-bottom: 15px;
-  min-width: 350px;
+  min-width: 250px;
 `
 
 const Button = styled.div`
