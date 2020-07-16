@@ -128,10 +128,10 @@ const Steckbrief = () => {
   )
 }
 const TopHalf = styled.div`
-  padding: 50px 0;
+  padding: 20px 15px;
 `
 const BottomHalf = styled.div`
-  padding: 50px 0;
+  padding: 50px 15px;
   background: #fdede2;
 `
 const Container = styled.article`
@@ -147,7 +147,7 @@ const LeftColumn = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 45%;
-  min-width: 400px;
+  min-width: 270px;
   h1 {
     font-family: "Abhaya Libre", sans-serif;
     letter-spacing: 1px;
@@ -170,11 +170,10 @@ const RightColumn = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 45%;
-  min-width: 400px;
+  min-width: 270px;
   p {
     font-family: "Dosis", sans-serif;
     max-width: 600px;
-    margin-right: 30px;
     margin-bottom: 0;
     line-height: 30px;
   }

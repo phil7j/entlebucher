@@ -93,7 +93,7 @@ const PeppersZuhause = () => {
   )
 }
 const TopHalf = styled.div`
-  padding: 50px 0;
+  padding: 5px 0;
 `
 
 const Container = styled.article`
@@ -109,11 +109,13 @@ const LeftColumn = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 45%;
-  min-width: 400px;
+  min-width: 270px;
+  margin-top: 15px;
   h1 {
     font-family: "Abhaya Libre", sans-serif;
     letter-spacing: 1px;
     max-width: 345px;
+    min-width: 280px;
     span {
       font-style: italic;
     }
@@ -132,7 +134,8 @@ const RightColumn = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 45%;
-  min-width: 400px;
+  min-width: 270px;
+  margin-top: 15px;
   p {
     font-family: "Dosis", sans-serif;
     max-width: 600px;
@@ -153,10 +156,6 @@ const ImageContainer = styled.div`
   max-width: 580px;
   margin: 5px 0;
   padding: 0 5px;
-  img {
-    min-height: 339px;
-    max-height: 339px;
-  }
 `
 
 const AdditionalPics = styled.div`
@@ -168,7 +167,7 @@ const AdditionalPics = styled.div`
   }
   div.column {
     width: 45%;
-    min-width: 400px;
+    min-width: 270px;
   }
   div.column:nth-child(2) {
     align-self: flex-end;

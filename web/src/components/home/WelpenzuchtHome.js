@@ -87,7 +87,7 @@ const Subtitle = styled.div`
 const ImgContainer = styled.div`
   width: 55%;
   max-width: 500px;
-  min-width: 350px;
+  min-width: 250px;
   margin-bottom: 15px;
 `
 

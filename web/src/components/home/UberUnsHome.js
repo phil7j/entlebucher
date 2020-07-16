@@ -124,7 +124,8 @@ const Card = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 315px;
+  min-width: 250px;
+  max-width: 350px;
   margin: 10px;
   h4 {
     font-family: "Abhaya Libre", sans-serif;

@@ -130,7 +130,7 @@ const Zuchtstaette = () => {
   )
 }
 const TopHalf = styled.div`
-  padding: 50px 0;
+  padding: 20px 0;
 `
 
 const Container = styled.article`
@@ -146,7 +146,7 @@ const LeftColumn = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 45%;
-  min-width: 400px;
+  min-width: 270px;
   h1 {
     font-family: "Abhaya Libre", sans-serif;
     letter-spacing: 1px;
@@ -169,7 +169,7 @@ const RightColumn = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 45%;
-  min-width: 400px;
+  min-width: 270px;
 `
 const TopDescription = styled.div`
   p {
@@ -191,13 +191,9 @@ const TopDescription = styled.div`
 
 const ImageContainer = styled.div`
   width: 100%;
-  max-width: 580px;
+  min-width: 270px;
   margin: 5px 0;
   padding: 0 5px;
-  img {
-    min-height: 339px;
-    max-height: 339px;
-  }
 `
 
 const AdditionalPics = styled.div`
@@ -209,7 +205,7 @@ const AdditionalPics = styled.div`
   }
   div.column {
     width: 45%;
-    min-width: 400px;
+    min-width: 270px;
   }
   div.column:nth-child(2) {
     align-self: flex-end;
@@ -225,7 +221,7 @@ const Button = styled.button`
   font-family: "Dosis", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 18px;
-  padding: 10px 40px;
+  padding: 10px 32px;
   transition: all 0.3s ease-in-out;
   background-color: #d59d82;
   outline: none;
@@ -300,7 +296,7 @@ const Subtitle = styled.div`
 `
 const BottomImgContainer = styled.div`
   width: 55%;
-  min-width: 400px;
+  min-width: 270px;
   max-width: 500px;
   margin-bottom: 15px;
 `

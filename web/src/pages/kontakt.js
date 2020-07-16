@@ -70,8 +70,8 @@ const Container = styled.article`
 `
 
 const Header = styled.div`
-  margin-top: 50px;
-  padding: 30px;
+  margin-top: 20px;
+  padding: 0 15px;
   width: 100%;
 
   display: flex;
@@ -93,6 +93,7 @@ const KontaktInfo = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  padding: 0 15px;
   p {
     line-height: 37px;
   }
@@ -102,10 +103,16 @@ const KontaktInfo = styled.div`
   p:nth-child(2) {
     max-width: 150px;
   }
+  @media (max-width: 834px) {
+    flex-direction: column;
+    align-items: center;
+    //justify-content: center;
+    text-align: center;
+  }
 `
 
 const MapImg = styled.div`
-  margin-top: 70px;
+  margin-top: 40px;
   width: 80%;
 `
 

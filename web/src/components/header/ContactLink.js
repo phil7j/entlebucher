@@ -23,7 +23,6 @@ const NavItem = styled.div`
   }
   @media (max-width: 1024px) {
     border: none;
-    margin-top: 20px;
     width: 100%;
     display: flex;
     justify-content: center;

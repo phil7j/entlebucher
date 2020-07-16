@@ -133,11 +133,11 @@ const Navita = () => {
 const FirstRow = styled.div`
   width: 100%;
   max-width: 1200px;
-  margin: 30px auto 0 auto;
+  margin: 0 auto 0 auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 30px 20px;
+  padding: 20px 15px;
 `
 const SecondRow = styled.div`
   width: 100%;
@@ -146,7 +146,7 @@ const SecondRow = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding: 30px 20px;
+  padding: 20px 15px;
 `
 
 const Content = styled.div`
@@ -171,7 +171,7 @@ const Content = styled.div`
   }
 `
 const FirstDescription = styled.div`
-  width: 425px;
+  min-width: 270px;
   p {
     font-family: "Dosis";
     max-width: 400px;
@@ -185,7 +185,7 @@ const FirstDescription = styled.div`
   }
 `
 const SecondDescription = styled.div`
-  width: 425px;
+  min-width: 270px;
   p {
     font-family: "Dosis";
     max-width: 400px;
@@ -223,6 +223,7 @@ const Subtitle = styled.div`
   letter-spacing: 1px;
   font-size: 35px;
   margin-bottom: 40px;
+  line-height: 35px;
   span {
     font-style: italic;
   }
@@ -231,7 +232,7 @@ const ImgContainer = styled.div`
   width: 25%;
   max-width: 500px;
   margin-bottom: 15px;
-  min-width: 350px;
+  min-width: 270px;
 `
 const Check = styled.div`
   width: 32px;

@@ -37,17 +37,17 @@ const ContactForm = styled.form`
   letter-spacing: 1px;
   label {
     font-size: 25px;
-    min-width: 350px;
+    min-width: 270px;
     margin-top: 25px;
     margin-bottom: 5px;
   }
   input {
     border: 3px solid #d9d9d9;
-    min-width: 350px;
+    min-width: 270px;
   }
   textarea {
     border: 3px solid #d9d9d9;
-    min-width: 350px;
+    min-width: 270px;
     min-height: 100px;
     @media (max-width: 700px) {
       min-width: 250px;
