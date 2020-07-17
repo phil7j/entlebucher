@@ -50,8 +50,7 @@ const UberUnsHome = () => {
           <h4>Der Entlebucher</h4>
           <p>
             Der Entlebucher-Sennenhund ist der kleinste der Schweizer
-            Sennenhunde und stammt aus dem Entlebuch im Kanton Bern und Luzern,
-            Schweiz
+            Sennenhunde und stammt aus dem Entlebuch in der Schweiz.
           </p>
         </Card>
         <Card>
@@ -61,7 +60,8 @@ const UberUnsHome = () => {
           <h4>Zuchtname "von der Laughy"</h4>
           <p>
             Laughy heisst auf Deutsch "lachend". Der Entlebucher-Sennenhund
-            zieht seine Oberlippen so hoch, dass es so aussieht als ob er lacht.
+            zieht seine Oberlippen verschmitzt hoch, dass es so aussieht als ob
+            er lacht.
           </p>
         </Card>
         <Card>

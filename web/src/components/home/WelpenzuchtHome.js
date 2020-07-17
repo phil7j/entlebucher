@@ -21,15 +21,18 @@ const WelpenZuchtHome = () => {
         <h2>
           Welpen<span>zucht</span>
         </h2>
-        <Subtitle>Wir erwarten unseren ersten Wurf im September 2020!</Subtitle>
+        <Subtitle>Wir erwarten unseren ersten Wurf im August 2020!</Subtitle>
         <p>
           Die Welpenvermittlungsstelle des Schweizerischen Klubs für Entlebucher
           Sennenhunde gibt Ihnen gerne Auskunft über die zu vermittelnden Welpen
           in der Schweiz.
         </p>
-        <Link to={"https://www.entlebuchersennenhunde.ch/welpenvermittlung"}>
+        <a
+          href={"https://www.entlebuchersennenhunde.ch/welpenvermittlung"}
+          target={"_blank"}
+        >
           <Button>Welpenvermittlung SKES</Button>
-        </Link>
+        </a>
       </Content>
       <ImgContainer>
         <Img fluid={data.file.childImageSharp.fluid} alt="Pepper as a baby" />
@@ -54,6 +57,7 @@ const Content = styled.div`
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  align-items: flex-start;
   padding: 20px;
   max-width: 380px;
   h2 {
@@ -74,6 +78,7 @@ const Content = styled.div`
   }
   a {
     text-decoration: none;
+    margin-bottom: 20px;
   }
 `
 
@@ -103,7 +108,6 @@ const Button = styled.div`
   cursor: pointer;
   box-shadow: 5px 5px 20px 0px rgba(50, 50, 50, 0.5);
   color: black;
-  margin-bottom: 20px;
   &:hover {
     color: white;
     background-color: black;

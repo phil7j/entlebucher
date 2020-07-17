@@ -57,16 +57,18 @@ const PeppersZuhause = () => {
           <RightColumn>
             <div>
               <p>
-                Wir wohnen im schönen Zürcher Oberland am Dorfrand in Rüti in
+                Wir wohnen im schönen Zürcher Oberland am Dorfrand von Rüti in
                 einem ruhigen Quartier. Pepper begleitet uns (fast) überall hin.
-                Sie ist sich an Kühe, Pferde, Schafe, Hühner, Katzen usw.
-                gewöhnt, da wir auf unseren Spaziergängen ihnen täglich
-                begegnen.
+                Auf unseren täglichen Spaziergängen begegnet sie Menschen,
+                anderen Hunden, und vielen Tieren, welche auf den Bauernhöfen in
+                der Umgebung zuhause sind. Sogar mit Katzen hat sie sich
+                angefreundet. Auch der Strassenverkehr und das geschäftige
+                Treiben im Dorfkern sind ihr nicht fremd.
               </p>
               <p>
                 Wir sind Mitglieder des Schweizerischen Klubs für
                 Entlebucher-Sennenhunde und züchten rassenreine Welpen mit
-                FCI-Abstammungsurkunde
+                FCI-Abstammungsurkunde.
               </p>
             </div>
 
