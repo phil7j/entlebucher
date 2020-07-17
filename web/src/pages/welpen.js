@@ -31,10 +31,10 @@ const Welpen = () => {
             </h2>
             <Description>
               <p>
-                Wir erwarten unseren ersten Wurf im September 2020. Bitte wenden
-                Sie sich vertrauensvoll direkt an die Welpenvermittlungsstelle
-                des Schweizerischen Klubs für Entlebucher Sennenhunde SKES. Es
-                sind laufend reinrassige Welpen aus guten SKES-Zuchtstätten zu
+                Wir erwarten unseren ersten Wurf Mitte August 2020. Bitte wenden
+                Sie sich vertrauensvoll an die Welpenvermittlungsstelle des
+                Schweizerischen Klubs für Entlebucher Sennenhunde SKES. Es sind
+                laufend reinrassige Welpen aus guten SKES-Zuchtstätten zu
                 vermitteln.
               </p>{" "}
             </Description>

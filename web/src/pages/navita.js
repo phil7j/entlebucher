@@ -48,7 +48,7 @@ const Navita = () => {
           <FirstDescription>
             <p>
               naVita bietet uns die beste & natürlichste Tiernahrung für unsere
-              Hündin und den Welpen an:
+              Hündin und ihre Welpen:
             </p>
             <p>
               <Check>
@@ -112,7 +112,7 @@ const Navita = () => {
         <ThirdDescription>
           <h3>
             Suchen Sie die <span>optimalste</span> Tiernahrung für Ihren{" "}
-            <span>neuen</span> Welpen?
+            <span>Liebling?</span>
           </h3>
           <p>
             Gerne stehe ich, Brigitta Weiss, Ihnen als Tiernahrungsberaterin von

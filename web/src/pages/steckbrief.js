@@ -58,16 +58,17 @@ const Steckbrief = () => {
             <div>
               <p>
                 Ich bin meinem Herrchen und Frauchen gegenüber sehr anhänglich
-                und folgsam. Im Haus verhalte ich mich ruhig und belle nur kurz
-                wenn die Hausglocke läutet. Ich liebe es neue Tricks zu lernen
-                und mich im Garten beim Spiel auszutoben. Anderen Menschen
-                gegenüber bin ich eher zurückhalten, freue mich aber riesig über
-                ein bekanntes Gesicht.
+                und (meistens) folgsam. Im Haus verhalte ich mich ruhig und
+                belle nur kurz wenn die Hausglocke läutet. Ich liebe es neue
+                Tricks zu lernen und mich im Garten beim Spiel auszutoben.
+                Ausgedehnte Spaziergänge und anspruchsvolle Wanderungen gehören
+                zu meinen Lieblingsbeschäftigungen. Anderen Menschen gegenüber
+                bin ich eher zurückhaltend, freue mich aber riesig über ein
+                bekanntes Gesicht.
               </p>
               <p>
                 Der Zuchtverband hat mir über mein Aussehen und Verhalten
-                Bestnoten gegeben. Ausgedehnte Spaziergänge und anspruchsvolle
-                Wanderungen gehören zu meinen Lieblingsbeschäftigungen.{" "}
+                Bestnoten gegeben. Ich habe auch nichts anderes erwartet!
               </p>
             </div>
 
@@ -93,16 +94,16 @@ const Steckbrief = () => {
           <RightColumn>
             <div>
               <p>
-                Der Entlebucher-Sennenhund ist der kleinste der
-                Schweizer-Sennenhunde. Der Rüde mit einer Grösse von ca. 44-50
-                cm und die Hündin mit 42-48 cm. Entlebucher stammen aus dem
-                Kanton Luzern und Bern, Schweiz.
+                Der Entlebucher-Sennenhund ist der kleinste der vier
+                Schweizer-Sennenhunde. Der Rüde hat eine Schulterhöhe von ca.
+                44-50 cm und die Hündin 42-48 cm. Entlebucher stammen, wie der
+                Name schon sagt, aus dem Entlebuch in der Schweiz.
               </p>
               <p>
-                Am liebsten ist es ihm, wenn er in der Nähe seines Herrchen
-                leben kann. Er lernt gerne und schnell. Er liebt es beschäftigt
-                zu sein mit Spielen, Kunststücken, Hindernissparqure,
-                Suchspiele, usw. Auch wandern geht er sehr gerne.
+                Am liebsten ist es ihm, wenn er in der Nähe seines Herrchens
+                ist. Er lernt gerne und schnell. Er liebt es mit Spielen,
+                Kunststücken, Hindernissparcour, Fährtensuche, Spazieren und
+                Wandern beschäftigt zu werden.
               </p>
               <p>
                 Auf der Website des Schweizerischen Klubs für

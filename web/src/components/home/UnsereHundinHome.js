@@ -60,6 +60,7 @@ const Content = styled.div`
   flex-direction: column;
   align-content: center;
   justify-content: center;
+  align-items: flex-start;
   padding: 20px;
   h2 {
     font-size: 35px;

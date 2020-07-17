@@ -55,21 +55,21 @@ const Zuchtstaette = () => {
               <h1>
                 Unsere <span>Zuchtstätte</span>
               </h1>
-              <h4>Wie wir züchten</h4>
+              <h4>... von der Laughy (FCI)</h4>
             </div>
             <ImageContainer>
-              <Img fluid={data.zuchtstaette1.childImageSharp.fluid} />
+              <Img fluid={data.zuchtstaette3.childImageSharp.fluid} />
             </ImageContainer>
           </LeftColumn>
           <RightColumn>
             <TopDescription>
               <p>
-                Unsere Welpen werden in einer speziellen Wurfkiste im Wohnzimmer
-                geboren und wachsen im Haus und im Garten auf. Wir gewöhnen Sie
-                an die Leine, andere Menschen & Autos. Sie entdecken spielerisch
-                ihre Umwelt und geniessen unsere liebevolle Pflege und
-                Aufmerksamkeit, bis sie mit ca. 10 Wochen entwurmt, geimpft und
-                gechippt zu ihrer neuen Familie ziehen.
+                Wir züchten nach den Vorgaben der Schweizerischen Kynologischen
+                Gesellschaft (SKG) und den Zuchtbestimmungen des Schweizerischen
+                Klubs für Entlebucher Sennenhunde (SKES). Unsere Zuchtstätte
+                wurde vom Zuchtwart des SKES kontrolliert und als gut befunden.
+                Der Zuchtname «…von der Laughy» ist bei der SKG eingetragen und
+                über den FCI international geschützt.
               </p>
 
               <Link to={"/welpen"}>
@@ -77,23 +77,52 @@ const Zuchtstaette = () => {
               </Link>
             </TopDescription>
             <ImageContainer>
-              <Img fluid={data.zuchtstaette2.childImageSharp.fluid} />
+              <Img fluid={data.zuchtstaette4.childImageSharp.fluid} />
             </ImageContainer>
           </RightColumn>
         </Container>
-        <AdditionalPics>
-          <div className={"column"}>
-            <h6>Pepper as Welpe</h6>
-            <ImageContainer>
-              <Img fluid={data.zuchtstaette3.childImageSharp.fluid} />
-            </ImageContainer>
-          </div>
-          <div className={"column"}>
-            <ImageContainer>
-              <Img fluid={data.zuchtstaette4.childImageSharp.fluid} />
-            </ImageContainer>
-          </div>
-        </AdditionalPics>
+        <Container>
+          <LeftColumn>
+            <div>
+              <h4>Wie wir züchten</h4>
+            </div>
+            {/*<ImageContainer>*/}
+            {/*  <Img fluid={data.zuchtstaette1.childImageSharp.fluid} />*/}
+            {/*</ImageContainer>*/}
+          </LeftColumn>
+          <RightColumn>
+            <TopDescription>
+              <p>
+                Unsere Welpen werden in einer speziellen Wurfkiste im Wohnzimmer
+                geboren und wachsen im Haus und im Garten auf. Um den Kleinen
+                einen optimalen Start ins Leben zu ermöglichen, füttern wir sie
+                von Anfang an mit hochwertiger Tiernahrung auf natürlicher Basis
+                von naVita. Wir gewöhnen Sie an andere Menschen,
+                Alltagsgeräusche, verschiedene Untergründe, die Leine und das
+                Autofahren. Sie entdecken spielerisch ihre Umgebung und
+                geniessen unsere liebevolle Pflege und Aufmerksamkeit, bis sie
+                mit ca. 10 Wochen entwurmt, geimpft und gechippt zu ihrer neuen
+                Familie ziehen.
+              </p>
+            </TopDescription>
+            {/*<ImageContainer>*/}
+            {/*  <Img fluid={data.zuchtstaette2.childImageSharp.fluid} />*/}
+            {/*</ImageContainer>*/}
+          </RightColumn>
+        </Container>
+        {/*<AdditionalPics>*/}
+        {/*  <div className={"column"}>*/}
+        {/*    <h6>Pepper as Welpe</h6>*/}
+        {/*    <ImageContainer>*/}
+        {/*      <Img fluid={data.zuchtstaette3.childImageSharp.fluid} />*/}
+        {/*    </ImageContainer>*/}
+        {/*  </div>*/}
+        {/*  <div className={"column"}>*/}
+        {/*    <ImageContainer>*/}
+        {/*      <Img fluid={data.zuchtstaette4.childImageSharp.fluid} />*/}
+        {/*    </ImageContainer>*/}
+        {/*  </div>*/}
+        {/*</AdditionalPics>*/}
       </TopHalf>
 
       <BottomHalf>
@@ -139,14 +168,17 @@ const Container = styled.article`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 30px;
 `
 
 const LeftColumn = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   width: 45%;
-  min-width: 270px;
+  min-width: 300px;
+  padding: 0 10px;
   h1 {
     font-family: "Abhaya Libre", sans-serif;
     letter-spacing: 1px;
@@ -169,14 +201,20 @@ const RightColumn = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: 45%;
-  min-width: 270px;
+  align-items: flex-start;
+  min-width: 300px;
+  padding: 0 10px;
 `
 const TopDescription = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
   p {
     font-family: "Dosis", sans-serif;
-    max-width: 600px;
-    margin-right: 30px;
-    margin-bottom: 0;
+    max-width: 550px;
+    //margin-right: 30px;
+    margin-bottom: 0px;
     line-height: 30px;
   }
 
@@ -237,7 +275,7 @@ const Button = styled.button`
 //Bottom Half
 const BottomHalf = styled.div`
   background: #fdede2;
-  padding: 30px 20px;
+  padding: 30px 0px;
 `
 
 const BottomContainer = styled.div`
@@ -247,6 +285,7 @@ const BottomContainer = styled.div`
   justify-content: space-around;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding: 20px;
 `
 
 const Content = styled.div`
@@ -274,7 +313,7 @@ const Content = styled.div`
   }
 `
 const BottomDescription = styled.div`
-  margin: 25px 0;
+  margin: 25px 0px;
   p {
     font-family: "Dosis";
     max-width: 600px;
