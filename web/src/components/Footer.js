@@ -2,6 +2,7 @@ import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { Instagram } from "@icons-pack/react-simple-icons"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -18,25 +19,27 @@ const Footer = () => {
   return (
     <Container>
       <LeftSection>
-        <Title>
-          <Link to={"/"}>
-            <LogoImg>
-              <Img
-                fluid={data.file.childImageSharp.fluid}
-                alt="A laughing cartoon of an Entlebucher"
-              />
-            </LogoImg>
-          </Link>
+        <Link to={"/"} className={"logo"}>
+          <LogoImg>
+            <Img
+              fluid={data.file.childImageSharp.fluid}
+              alt="A laughing cartoon of an Entlebucher"
+            />
+          </LogoImg>
+        </Link>
+        <TextAndSocial>
           <p>
             Entlebucher-<span>Sennenhunde </span>
             von der Laughy
           </p>
-        </Title>
-        <Credit>
-          <a href={"https://johnsondesigns.tech/"}>
-            <p>© 2020 by Johnson Designs</p>
+          <a
+            className={"instagram-link"}
+            href={"https://instagram.com/entlebucher_von_der_laughy"}
+            target={"_blank"}
+          >
+            <InstagramIcon />
           </a>
-        </Credit>
+        </TextAndSocial>
       </LeftSection>
       <RightSection>
         <Link to={"/steckbrief"}>Unsere Hündin</Link>
@@ -44,26 +47,34 @@ const Footer = () => {
         <Link to={"/navita"}>naVita Produkte</Link>
         <Link to={"/kontakt"}>Kontakt</Link>
       </RightSection>
+      <Credit>
+        <a href={"https://johnsondesigns.tech/"}>
+          <p>© 2020 by Johnson Designs</p>
+        </a>
+      </Credit>
     </Container>
   )
 }
 
 const Container = styled.div`
   width: 100%;
-  padding: 20px 10px 15px 10px;
+  padding: 20px 20px 15px 20px;
   background-color: #fdf6f1;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 `
 const LogoImg = styled.div`
   width: 100px;
-  @media (max-width: 1024px) {
+  @media (max-width: 700px) {
     display: none;
   }
 `
-const Title = styled.div`
+const TextAndSocial = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+  align-items: flex-start;
   p {
     font-family: "Abhaya Libre";
     margin: 0;
@@ -72,33 +83,37 @@ const Title = styled.div`
       font-style: italic;
     }
   }
+  a.instagram-link {
+    margin-top: 15px;
+  }
+  @media (max-width: 340px) {
+    text-align: center;
+    align-items: center;
+    margin-top: 0px;
+  }
 `
 
 const Credit = styled.div`
+  margin-top: 15px;
   a {
     color: black;
     text-decoration: none;
     font-size: 14px;
-    font-family: "Dosis";
+    font-family: "Dosis", sans-serif;
     transition: all 0.3s ease-in-out;
     &:hover {
       color: #d59d82;
-      //font-size: 15px;
     }
   }
 `
 
 const LeftSection = styled.div`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+
   @media (max-width: 1024px) {
     align-items: flex-start;
-    a {
+    a.logo {
       display: inline-block;
-      margin-top: 20px;
     }
   }
 `
@@ -107,6 +122,7 @@ const RightSection = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  margin-top: 20px;
   a {
     font-family: "Dosis";
     color: black;
@@ -115,6 +131,16 @@ const RightSection = styled.div`
     &:hover {
       color: #d59d82;
     }
+  }
+`
+
+const InstagramIcon = styled(Instagram)`
+  color: #e4405f;
+  width: 30px;
+  height: 30px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    transform: scale(1.3);
   }
 `
 
