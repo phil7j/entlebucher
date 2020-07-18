@@ -50,6 +50,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   background: #ffffff;
   padding: 30px 20px;
+  //align-items: flex-start;
 `
 
 const Content = styled.div`
@@ -58,8 +59,7 @@ const Content = styled.div`
   align-content: center;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
-  max-width: 380px;
+  max-width: 300px;
   h2 {
     font-size: 35px;
     letter-spacing: 1px;
@@ -92,7 +92,7 @@ const Subtitle = styled.div`
 const ImgContainer = styled.div`
   width: 55%;
   max-width: 500px;
-  min-width: 250px;
+  min-width: 270px;
   margin-bottom: 15px;
 `
 

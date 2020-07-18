@@ -61,7 +61,6 @@ const Content = styled.div`
   align-content: center;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
   h2 {
     font-size: 35px;
     letter-spacing: 1px;
@@ -101,7 +100,7 @@ const ImgContainer = styled.div`
   width: 55%;
   max-width: 500px;
   margin-bottom: 15px;
-  min-width: 250px;
+  min-width: 270px;
 `
 
 const Button = styled.div`
