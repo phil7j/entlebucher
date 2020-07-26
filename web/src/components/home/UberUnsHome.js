@@ -71,7 +71,7 @@ const UberUnsHome = () => {
           <h4>SKES</h4>
           <p>
             Wir sind Mitglieder des "Schweizerischen Klubs für Entlebucher
-            Sennenhunde" (abk. SKES) und züchten rassenreine Welpe mit
+            Sennenhunde" (abk. SKES) und züchten rassenreine Welpen mit
             FCI-Abstammungsurkunde (Standard Nr. 47).
           </p>
         </Card>
