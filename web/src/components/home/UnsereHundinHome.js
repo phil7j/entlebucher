@@ -34,7 +34,7 @@ const UnsereHundinHome = () => {
             <p>Pepper hat am 05.10.2019 die Ankörung des SKES bestanden!</p>
           </Description>
           <Link to={"/steckbrief"}>
-            <Button>Streckbrief</Button>
+            <Button>Steckbrief</Button>
           </Link>
         </Content>
       </Container>
