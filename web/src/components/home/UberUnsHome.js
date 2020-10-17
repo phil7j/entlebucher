@@ -32,7 +32,6 @@ const UberUnsHome = () => {
 
   return (
     <Container>
-      {console.log(data)}
       <Heading>
         <h2>
           Über<span> uns</span>

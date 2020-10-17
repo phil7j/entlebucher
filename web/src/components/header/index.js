@@ -35,22 +35,32 @@ const Header = () => {
   return (
     <>
       <Container>
-        {console.log(open)}
         <Logo setOpen={setOpen} />
         <Hamburger open={open} onClick={() => setOpen(!open)} />
         <Nav open={open}>
-          {links.map(link =>
+          {links.map((link, index) =>
             link.type === "dropdown" ? (
               <Dropdown
+                key={index}
                 to={link.to}
                 text={link.text}
                 nestedLinks={link.nestedLinks}
                 setOpen={setOpen}
               />
             ) : link.type === "normal" ? (
-              <NormalLink to={link.to} text={link.text} setOpen={setOpen} />
+              <NormalLink
+                key={index}
+                to={link.to}
+                text={link.text}
+                setOpen={setOpen}
+              />
             ) : (
-              <ContactLink to={link.to} text={link.text} setOpen={setOpen} />
+              <ContactLink
+                key={index}
+                to={link.to}
+                text={link.text}
+                setOpen={setOpen}
+              />
             )
           )}
         </Nav>

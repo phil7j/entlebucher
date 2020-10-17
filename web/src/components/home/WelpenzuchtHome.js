@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 
 const WelpenZuchtHome = () => {
   const data = useStaticQuery(graphql`
@@ -21,7 +21,7 @@ const WelpenZuchtHome = () => {
         <h2>
           Welpen<span>zucht</span>
         </h2>
-        <Subtitle>Wir erwarten unseren ersten Wurf im August 2020!</Subtitle>
+        <Subtitle>Wir hatten unseren ersten Wurf im August 2020!</Subtitle>
         <p>
           Die Welpenvermittlungsstelle des Schweizerischen Klubs für Entlebucher
           Sennenhunde gibt Ihnen gerne Auskunft über die zu vermittelnden Welpen
@@ -30,6 +30,7 @@ const WelpenZuchtHome = () => {
         <a
           href={"https://www.entlebuchersennenhunde.ch/welpenvermittlung"}
           target={"_blank"}
+          rel={"noreferrer"}
         >
           <Button>Welpenvermittlung SKES</Button>
         </a>

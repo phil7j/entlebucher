@@ -113,6 +113,7 @@ const Steckbrief = () => {
                 <a
                   href={"https://www.entlebuchersennenhunde.ch/die-rasse/index"}
                   target={"_blank"}
+                  rel={"noreferrer"}
                 >
                   mehr über die Rasse
                 </a>
