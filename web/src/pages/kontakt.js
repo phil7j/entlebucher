@@ -46,7 +46,11 @@ const Kontakt = () => {
           />
         </MapImg>
         <MapsButton>
-          <a href={"https://goo.gl/maps/VRZKeGC3nF8cC1YGA"} target={"_blank"}>
+          <a
+            href={"https://goo.gl/maps/VRZKeGC3nF8cC1YGA"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
             Wegbeschreibung
           </a>
         </MapsButton>

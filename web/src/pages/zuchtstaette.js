@@ -149,7 +149,11 @@ const Zuchtstaette = () => {
                 Verhalten und das Wesen von ihm sind exzellent. 
               </p>{" "}
             </BottomDescription>
-            <a href={"https://bello-cesar.ch/cesar/"} target={"_blank"}>
+            <a
+              href={"https://bello-cesar.ch/cesar/"}
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
               <Button>mehr über Bello-Cesar</Button>
             </a>
           </Content>
@@ -234,27 +238,27 @@ const ImageContainer = styled.div`
   padding: 0 5px;
 `
 
-const AdditionalPics = styled.div`
-  h6 {
-    font-family: "Dosis", sans-serif;
-    font-size: 18px;
-    font-weight: 400;
-    margin: 15px;
-  }
-  div.column {
-    width: 45%;
-    min-width: 270px;
-  }
-  div.column:nth-child(2) {
-    align-self: flex-end;
-  }
-
-  margin: 0 auto;
-  max-width: 1400px;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`
+// const AdditionalPics = styled.div`
+//   h6 {
+//     font-family: "Dosis", sans-serif;
+//     font-size: 18px;
+//     font-weight: 400;
+//     margin: 15px;
+//   }
+//   div.column {
+//     width: 45%;
+//     min-width: 270px;
+//   }
+//   div.column:nth-child(2) {
+//     align-self: flex-end;
+//   }
+//
+//   margin: 0 auto;
+//   max-width: 1400px;
+//   display: flex;
+//   justify-content: center;
+//   flex-wrap: wrap;
+// `
 const Button = styled.button`
   font-family: "Dosis", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;

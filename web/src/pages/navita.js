@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 
 const Navita = () => {
@@ -96,7 +96,11 @@ const Navita = () => {
               registrieren & <span>bestellen</span>
             </Subtitle>
             <p>Hier geht es zur Registrierung & Bestellung:</p>
-            <a href="https://tiernahrung.navita.ch/de/" target={"_blank"}>
+            <a
+              href="https://tiernahrung.navita.ch/de/"
+              target={"_blank"}
+              rel={"noreferrer"}
+            >
               <Button>naVita Website</Button>
             </a>
           </SecondDescription>
@@ -121,6 +125,7 @@ const Navita = () => {
           <a
             href={"https://tiernahrung.navita.ch/de/contactvendor"}
             target={"_blank"}
+            rel={"noreferrer"}
           >
             <Button>Kontakt</Button>
           </a>

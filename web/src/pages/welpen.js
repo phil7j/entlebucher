@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Termin from "../components/home/Termin"
 
@@ -41,6 +41,7 @@ const Welpen = () => {
             <a
               href="https://www.entlebuchersennenhunde.ch/welpenvermittlung"
               target={"_blank"}
+              rel={"noreferrer"}
             >
               <Button>SKES</Button>
             </a>
@@ -96,12 +97,6 @@ const Description = styled.div`
   }
 `
 
-const Subtitle = styled.div`
-  color: #d59d82;
-  font-family: "Dosis", sans-serif;
-  letter-spacing: 1px;
-  font-size: 25px;
-`
 const ImgContainer = styled.div`
   width: 55%;
   max-width: 500px;

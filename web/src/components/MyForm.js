@@ -12,12 +12,18 @@ function MyForm() {
       >
         <input type="hidden" name={"bot-field"} />
         <input type="hidden" name={"form-name"} value={"contact"} />
-        <label htmlFor="name">Name *</label>
-        <input type="text" name="name" required />
-        <label htmlFor="email">Email *</label>
-        <input type="email" name="email" required />
-        <label htmlFor="nachricht">Nachricht *</label>
-        <textarea type="text" name="nachricht" required />
+        <label for={"name"} htmlFor="name">
+          Name *
+        </label>
+        <input id="name" type="text" name="name" required />
+        <label for={"email"} htmlFor="email">
+          Email *
+        </label>
+        <input type="email" id={"email"} name="email" required />
+        <label for={"nachricht"} htmlFor="nachricht">
+          Nachricht *
+        </label>
+        <textarea type="text" id="nachricht" name="nachricht" required />
 
         <SubmitButton type={"submit"}>Senden!</SubmitButton>
       </ContactForm>

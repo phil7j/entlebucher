@@ -36,6 +36,7 @@ const Footer = () => {
             className={"instagram-link"}
             href={"https://instagram.com/entlebucher_von_der_laughy"}
             target={"_blank"}
+            rel={"noreferrer"}
           >
             <InstagramIcon />
           </a>
