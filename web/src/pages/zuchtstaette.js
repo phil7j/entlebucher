@@ -3,32 +3,33 @@ import styled from "styled-components"
 import SEO from "../components/seo"
 import { graphql, useStaticQuery, Link } from "gatsby"
 import Img from "gatsby-image"
+import ImageGrid from "../components/ImageGrid"
 
 const Zuchtstaette = () => {
   const data = useStaticQuery(graphql`
     query {
-      zuchtstaette3: file(relativePath: { eq: "zuchtstaette3.JPG" }) {
+      zuchtstaette3: file(relativePath: { eq: "zuchtstaette3.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      zuchtstaette1: file(relativePath: { eq: "zuchtstaette1.JPG" }) {
+      zuchtstaette1: file(relativePath: { eq: "zuchtstaette1.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      zuchtstaette2: file(relativePath: { eq: "zuchtstaette2.JPG" }) {
+      zuchtstaette2: file(relativePath: { eq: "zuchtstaette2.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      zuchtstaette4: file(relativePath: { eq: "zuchtstaette4.JPG" }) {
+      zuchtstaette4: file(relativePath: { eq: "zuchtstaette4.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -44,85 +45,58 @@ const Zuchtstaette = () => {
       }
     }
   `)
-
+  let dataForGrid
+  if (data) {
+    dataForGrid = Object.entries(data).filter(pic => pic[0] !== "bello")
+  }
   return (
     <>
       <SEO title="Zuchtstätte" />
       <TopHalf>
         <Container>
-          <LeftColumn>
-            <div>
-              <h1>
-                Unsere <span>Zuchtstätte</span>
-              </h1>
-              <h4>... von der Laughy (FCI)</h4>
-            </div>
-            <ImageContainer>
-              <Img fluid={data.zuchtstaette3.childImageSharp.fluid} />
-            </ImageContainer>
-          </LeftColumn>
-          <RightColumn>
-            <TopDescription>
-              <p>
-                Wir züchten nach den Vorgaben der Schweizerischen Kynologischen
-                Gesellschaft (SKG) und den Zuchtbestimmungen des Schweizerischen
-                Klubs für Entlebucher Sennenhunde (SKES). Unsere Zuchtstätte
-                wurde vom Zuchtwart des SKES kontrolliert und als gut befunden.
-                Der Zuchtname «…von der Laughy» ist bei der SKG eingetragen und
-                über den FCI international geschützt.
-              </p>
+          <Header>
+            <h1>
+              Unsere <span>Zuchtstätte</span>
+            </h1>
+            <h4>... von der Laughy (FCI)</h4>
+          </Header>
+          <TopDescription>
+            <p>
+              Wir züchten nach den Vorgaben der Schweizerischen Kynologischen
+              Gesellschaft (SKG) und den Zuchtbestimmungen des Schweizerischen
+              Klubs für Entlebucher Sennenhunde (SKES). Unsere Zuchtstätte wurde
+              vom Zuchtwart des SKES kontrolliert und als gut befunden. Der
+              Zuchtname «…von der Laughy» ist bei der SKG eingetragen und über
+              den FCI international geschützt.
+            </p>
 
-              <Link to={"/welpen"}>
-                <Button>Unsere Welpen</Button>
-              </Link>
-            </TopDescription>
-            <ImageContainer>
-              <Img fluid={data.zuchtstaette4.childImageSharp.fluid} />
-            </ImageContainer>
-          </RightColumn>
+            <Link to={"/welpen"}>
+              <Button>Unsere Welpen</Button>
+            </Link>
+          </TopDescription>
         </Container>
+
+        <ImageGrid data={dataForGrid} />
+
         <Container>
-          <LeftColumn>
-            <div>
-              <h4>Wie wir züchten</h4>
-            </div>
-            {/*<ImageContainer>*/}
-            {/*  <Img fluid={data.zuchtstaette1.childImageSharp.fluid} />*/}
-            {/*</ImageContainer>*/}
-          </LeftColumn>
-          <RightColumn>
-            <TopDescription>
-              <p>
-                Unsere Welpen werden in einer speziellen Wurfkiste im Wohnzimmer
-                geboren und wachsen im Haus und im Garten auf. Um den Kleinen
-                einen optimalen Start ins Leben zu ermöglichen, füttern wir sie
-                von Anfang an mit hochwertiger Tiernahrung auf natürlicher Basis
-                von naVita. Wir gewöhnen Sie an andere Menschen,
-                Alltagsgeräusche, verschiedene Untergründe, die Leine und das
-                Autofahren. Sie entdecken spielerisch ihre Umgebung und
-                geniessen unsere liebevolle Pflege und Aufmerksamkeit, bis sie
-                mit ca. 10 Wochen entwurmt, geimpft und gechippt zu ihrer neuen
-                Familie ziehen.
-              </p>
-            </TopDescription>
-            {/*<ImageContainer>*/}
-            {/*  <Img fluid={data.zuchtstaette2.childImageSharp.fluid} />*/}
-            {/*</ImageContainer>*/}
-          </RightColumn>
+          {/*<LeftColumn>*/}
+          <div>
+            <h4>Wie wir züchten</h4>
+          </div>
+          <TopDescription>
+            <p>
+              Unsere Welpen werden in einer speziellen Wurfkiste im Wohnzimmer
+              geboren und wachsen im Haus und im Garten auf. Um den Kleinen
+              einen optimalen Start ins Leben zu ermöglichen, füttern wir sie
+              von Anfang an mit hochwertiger Tiernahrung auf natürlicher Basis
+              von naVita. Wir gewöhnen Sie an andere Menschen, Alltagsgeräusche,
+              verschiedene Untergründe, die Leine und das Autofahren. Sie
+              entdecken spielerisch ihre Umgebung und geniessen unsere
+              liebevolle Pflege und Aufmerksamkeit, bis sie mit ca. 10 Wochen
+              entwurmt, geimpft und gechippt zu ihrer neuen Familie ziehen.
+            </p>
+          </TopDescription>
         </Container>
-        {/*<AdditionalPics>*/}
-        {/*  <div className={"column"}>*/}
-        {/*    <h6>Pepper as Welpe</h6>*/}
-        {/*    <ImageContainer>*/}
-        {/*      <Img fluid={data.zuchtstaette3.childImageSharp.fluid} />*/}
-        {/*    </ImageContainer>*/}
-        {/*  </div>*/}
-        {/*  <div className={"column"}>*/}
-        {/*    <ImageContainer>*/}
-        {/*      <Img fluid={data.zuchtstaette4.childImageSharp.fluid} />*/}
-        {/*    </ImageContainer>*/}
-        {/*  </div>*/}
-        {/*</AdditionalPics>*/}
       </TopHalf>
 
       <BottomHalf>
@@ -163,16 +137,34 @@ const Zuchtstaette = () => {
   )
 }
 const TopHalf = styled.div`
-  padding: 20px 0;
+  padding: 20px 20px;
+`
+
+const Header = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 const Container = styled.article`
-  margin: 0 auto;
-  max-width: 1400px;
+  margin: 20px auto;
+  max-width: 1100px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  h1 {
+    font-family: "Abhaya Libre", sans-serif;
+    letter-spacing: 1px;
+    span {
+      font-style: italic;
+    }
+  }
+  h4 {
+    font-family: "Dosis", sans-serif;
+    color: #d59d82;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 28px;
+  }
 `
 
 const LeftColumn = styled.div`
@@ -238,27 +230,6 @@ const ImageContainer = styled.div`
   padding: 0 5px;
 `
 
-// const AdditionalPics = styled.div`
-//   h6 {
-//     font-family: "Dosis", sans-serif;
-//     font-size: 18px;
-//     font-weight: 400;
-//     margin: 15px;
-//   }
-//   div.column {
-//     width: 45%;
-//     min-width: 270px;
-//   }
-//   div.column:nth-child(2) {
-//     align-self: flex-end;
-//   }
-//
-//   margin: 0 auto;
-//   max-width: 1400px;
-//   display: flex;
-//   justify-content: center;
-//   flex-wrap: wrap;
-// `
 const Button = styled.button`
   font-family: "Dosis", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
