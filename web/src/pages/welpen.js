@@ -4,14 +4,26 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Termin from "../components/home/Termin"
+import ThreePicRow from "../components/ThreePicRow"
 
 const Welpen = () => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { eq: "welpen.JPG" }) {
+      welpen: file(relativePath: { eq: "welpen.JPG" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
+          }
+        }
+      }
+      aslan: allFile(filter: { relativeDirectory: { eq: "aslan" } }) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
           }
         }
       }
@@ -20,10 +32,31 @@ const Welpen = () => {
   return (
     <>
       <SEO title="Welpen" />
+      {console.log("aslan", data.aslan)}
+      <UnsereWelpen>
+        <Container>
+          <Title>
+            <h1>Unsere Welpen</h1>
+            <h4>Der A-Wurf von der Laughy</h4>
+          </Title>
+          <Description>
+            <p>
+              Pepper ist stolze Mutter ihres ersten Wurfes! Am 12. & 13. August
+              2020 haben diese 3 süsse & gesunde Welpen das Licht der Welt
+              erblickt.{" "}
+            </p>
+          </Description>
+        </Container>
+        <ThreePicRow
+          title={"Aslan"}
+          description={"Geb. 12.08.2020, Gewicht: 420g"}
+          data={data.aslan.edges}
+        />
+      </UnsereWelpen>
       <Background>
         <Container>
           <ImgContainer>
-            <Img fluid={data.file.childImageSharp.fluid} alt="A dog paw" />
+            <Img fluid={data.welpen.childImageSharp.fluid} alt="A dog paw" />
           </ImgContainer>
           <Content>
             <h2>
@@ -52,6 +85,35 @@ const Welpen = () => {
     </>
   )
 }
+const UnsereWelpen = styled.section``
+
+const PuppyPics = styled.section``
+
+const Title = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 450px;
+  flex-grow: 1;
+  align-items: flex-start;
+  margin-right: 10px;
+  h1 {
+    font-size: 40.5px;
+    letter-spacing: 1px;
+    font-family: "Abhaya Libre";
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 0px;
+  }
+  h4 {
+    font-family: "Dosis", sans-serif;
+    color: #d59d82;
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-size: 26px;
+  }
+`
+
 const Background = styled.div`
   width: 100%;
   background: #fdf6f1;
@@ -88,10 +150,10 @@ const Content = styled.div`
   }
 `
 const Description = styled.div`
-  margin: 20px 0;
+  display: flex;
   p {
     font-family: "Dosis";
-    max-width: 400px;
+    max-width: 450px;
     font-size: 18px;
     margin: 0;
   }
@@ -116,6 +178,7 @@ const Button = styled.div`
   cursor: pointer;
   box-shadow: 5px 5px 20px 0px rgba(50, 50, 50, 0.5);
   color: black;
+  margin: 20px 0 0 0;
   &:hover {
     color: white;
     background-color: black;

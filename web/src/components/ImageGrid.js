@@ -20,7 +20,7 @@ const ImageGrid = props => {
 
 const Grid = styled.div`
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 30px auto;
   display: grid;
   grid-template-columns: repeat(2, minmax(100px, 600px));
   grid-template-rows: repeat(2, 1fr);

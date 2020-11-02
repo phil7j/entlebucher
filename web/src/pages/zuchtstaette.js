@@ -8,21 +8,21 @@ import ImageGrid from "../components/ImageGrid"
 const Zuchtstaette = () => {
   const data = useStaticQuery(graphql`
     query {
-      zuchtstaette3: file(relativePath: { eq: "zuchtstaette3.jpg" }) {
+      zuchtstaette3: file(relativePath: { eq: "zuchtstaette1.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      zuchtstaette1: file(relativePath: { eq: "zuchtstaette1.jpg" }) {
+      zuchtstaette1: file(relativePath: { eq: "zuchtstaette2.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      zuchtstaette2: file(relativePath: { eq: "zuchtstaette2.jpg" }) {
+      zuchtstaette2: file(relativePath: { eq: "zuchtstaette3.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -79,7 +79,6 @@ const Zuchtstaette = () => {
         <ImageGrid data={dataForGrid} />
 
         <Container>
-          {/*<LeftColumn>*/}
           <div>
             <h4>Wie wir züchten</h4>
           </div>
@@ -151,6 +150,7 @@ const Container = styled.article`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-content: center;
   h1 {
     font-family: "Abhaya Libre", sans-serif;
     letter-spacing: 1px;
@@ -167,45 +167,10 @@ const Container = styled.article`
   }
 `
 
-const LeftColumn = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 45%;
-  min-width: 300px;
-  padding: 0 10px;
-  h1 {
-    font-family: "Abhaya Libre", sans-serif;
-    letter-spacing: 1px;
-    max-width: 345px;
-    span {
-      font-style: italic;
-    }
-  }
-  h4 {
-    font-family: "Dosis", sans-serif;
-    color: #d59d82;
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-size: 28px;
-  }
-`
-
-const RightColumn = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 45%;
-  align-items: flex-start;
-  min-width: 300px;
-  padding: 0 10px;
-`
 const TopDescription = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 20px;
   p {
     font-family: "Dosis", sans-serif;
     max-width: 550px;
@@ -221,13 +186,6 @@ const TopDescription = styled.div`
     color: black;
     transition: all 0.3s ease-in-out;
   }
-`
-
-const ImageContainer = styled.div`
-  width: 100%;
-  min-width: 270px;
-  margin: 5px 0;
-  padding: 0 5px;
 `
 
 const Button = styled.button`
@@ -268,7 +226,7 @@ const Content = styled.div`
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  padding: 20px;
+  //padding: 20px;
   max-width: 600px;
   h2 {
     font-size: 35px;
@@ -310,7 +268,7 @@ const Subtitle = styled.div`
 `
 const BottomImgContainer = styled.div`
   width: 55%;
-  min-width: 270px;
+  min-width: 280px;
   max-width: 500px;
   margin-bottom: 15px;
 `
