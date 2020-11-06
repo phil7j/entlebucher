@@ -32,7 +32,6 @@ const Welpen = () => {
   return (
     <>
       <SEO title="Welpen" />
-      {console.log("aslan", data.aslan)}
       <UnsereWelpen>
         <Container>
           <Title>
@@ -85,9 +84,9 @@ const Welpen = () => {
     </>
   )
 }
-const UnsereWelpen = styled.section``
-
-const PuppyPics = styled.section``
+const UnsereWelpen = styled.section`
+  padding: 10px;
+`
 
 const Title = styled.div`
   display: flex;
@@ -123,7 +122,7 @@ const Container = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
   padding: 30px 20px;
 `
