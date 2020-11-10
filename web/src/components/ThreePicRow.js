@@ -7,9 +7,11 @@ const ThreePicRow = props => {
 
   return (
     <Container>
-      {/*  TODO Get images to wrap when screen is smaller, now they just disappear */}
-      <h3>{props.title}</h3>
-      <h5>{props.description}</h5>
+      <Title>
+        <h3>{props.title}</h3>
+        <h5>{props.description}</h5>
+      </Title>
+
       <Pics>
         {data &&
           data.length > 0 &&
@@ -25,18 +27,50 @@ const ThreePicRow = props => {
 const Container = styled.div`
   margin: 30px auto;
   max-width: 1360px;
-  //padding: 0 20px;
+`
+
+const Title = styled.div`
+  margin-left: 10px;
+  h3,
+  h5 {
+    letter-spacing: 1px;
+    font-family: "Abhaya Libre";
+  }
+  h3 {
+    font-size: 30px;
+    font-style: italic;
+  }
+  h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  @media (max-width: 460px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    h5 {
+      margin-bottom: 5px;
+    }
+  }
 `
 
 const Pics = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  @media (max-width: 500px) {
+    justify-content: center;
+  }
 
   .pic-wrapper {
     width: 200px;
     flex-grow: 1;
     max-height: 400px;
     margin: 10px 10px;
+     @media (max-width: 500px) {
+      max-width: 300px;
+      max-height: 220px;
   }
   .image {
     width: 100%;

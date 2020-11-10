@@ -15,7 +15,7 @@ const IndexPage = () => {
       <UberUnsHome />
       <UnsereHundinHome />
       <WelpenzuchtHome />
-      <Termin />
+      <Termin pics={true} />
     </Container>
   )
 }

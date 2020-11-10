@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import SEO from "../components/seo"
 import Termin from "../components/home/Termin"
 import ThreePicRow from "../components/ThreePicRow"
@@ -9,14 +9,45 @@ import ThreePicRow from "../components/ThreePicRow"
 const Welpen = () => {
   const data = useStaticQuery(graphql`
     query {
-      welpen: file(relativePath: { eq: "welpen.JPG" }) {
+      welpen: file(relativePath: { eq: "welpen2.JPG" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
       }
-      aslan: allFile(filter: { relativeDirectory: { eq: "aslan" } }) {
+      aslan: allFile(
+        filter: { relativeDirectory: { eq: "aslan" } }
+        sort: { order: ASC, fields: name }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+      }
+      archie: allFile(
+        filter: { relativeDirectory: { eq: "archie" } }
+        sort: { order: ASC, fields: name }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+      }
+      amira: allFile(
+        filter: { relativeDirectory: { eq: "amira" } }
+        sort: { order: ASC, fields: name }
+      ) {
         edges {
           node {
             childImageSharp {
@@ -51,11 +82,39 @@ const Welpen = () => {
           description={"Geb. 12.08.2020, Gewicht: 420g"}
           data={data.aslan.edges}
         />
+        <ThreePicRow
+          title={"Archie"}
+          description={"Geb. 12.08.2020, Gewicht: 400g"}
+          data={data.archie.edges}
+        />
+        <ThreePicRow
+          title={"Amira"}
+          description={"Geb. 13.08.2020, Gewicht: 406g"}
+          data={data.amira.edges}
+        />
+        <Instagram>
+          <h2>
+            Fotos von unserem
+            <span>Wurf</span>
+          </h2>
+
+          <p>
+            Auf unserer Instagram Seite posten wir laufend Fotos von Pepper &
+            unseren Welpen:{" "}
+          </p>
+          <Link to={"/kontakt"}>
+            <Button instagram={true}>Instagram</Button>
+          </Link>
+        </Instagram>
       </UnsereWelpen>
       <Background>
-        <Container>
+        <Container2>
           <ImgContainer>
-            <Img fluid={data.welpen.childImageSharp.fluid} alt="A dog paw" />
+            <Img
+              className={"image"}
+              fluid={data.welpen.childImageSharp.fluid}
+              alt="A dog paw"
+            />
           </ImgContainer>
           <Content>
             <h2>
@@ -63,10 +122,10 @@ const Welpen = () => {
             </h2>
             <Description>
               <p>
-                Wir erwarten unseren ersten Wurf Mitte August 2020. Bitte wenden
-                Sie sich vertrauensvoll an die Welpenvermittlungsstelle des
-                Schweizerischen Klubs für Entlebucher Sennenhunde SKES. Es sind
-                laufend reinrassige Welpen aus guten SKES-Zuchtstätten zu
+                Wir erwarten unseren nächsten Wurf im Frühling 2021. Bitte
+                wenden Sie sich vertrauensvoll an die Welpenvermittlungsstelle
+                des Schweizerischen Klubs für Entlebucher Sennenhunde SKES. Es
+                sind laufend reinrassige Welpen aus guten SKES-Zuchtstätten zu
                 vermitteln.
               </p>{" "}
             </Description>
@@ -78,7 +137,7 @@ const Welpen = () => {
               <Button>SKES</Button>
             </a>
           </Content>
-        </Container>
+        </Container2>
       </Background>
       <Termin />
     </>
@@ -87,14 +146,44 @@ const Welpen = () => {
 const UnsereWelpen = styled.section`
   padding: 10px;
 `
-
-const Title = styled.div`
+const Instagram = styled.div`
+  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 10px 20px 90px 20px;
+
+  color: #010101;
+  h2 {
+    font-size: 27px;
+    letter-spacing: 1px;
+    font-family: "Abhaya Libre";
+    font-weight: 500;
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 0;
+    span {
+      letter-spacing: 1px;
+      font-style: italic;
+    }
+  }
+  p {
+    font-family: "Dosis";
+    max-width: 500px;
+    font-size: 20px;
+    margin: 35px 0;
+    text-align: center;
+  }
+  a {
+    text-decoration: none;
+  }
+`
+const Title = styled.div`
+  display: flex;
+  flex-direction: column;
   max-width: 450px;
   flex-grow: 1;
-  align-items: flex-start;
   margin-right: 10px;
   h1 {
     font-size: 40.5px;
@@ -111,6 +200,9 @@ const Title = styled.div`
     letter-spacing: 0px;
     font-size: 26px;
   }
+  @media (max-width: 500px) {
+    align-items: center;
+  }
 `
 
 const Background = styled.div`
@@ -125,6 +217,23 @@ const Container = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 30px 20px;
+  @media (max-width: 500px) {
+    padding: 10px 0;
+    justify-content: center;
+  }
+`
+const Container2 = styled.div`
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  @media (max-width: 700px) {
+    padding: 30px 0;
+    justify-content: center;
+  }
 `
 
 const Content = styled.div`
@@ -147,41 +256,72 @@ const Content = styled.div`
   a {
     text-decoration: none;
   }
+  @media (max-width: 1150px) {
+    h2 {
+      font-size: 30px;
+    }
+  }
+  @media (max-width: 862px) {
+    h2 {
+      text-align: center;
+    }
+    a {
+      display: flex;
+      justify-content: center;
+    }
+  }
 `
 const Description = styled.div`
   display: flex;
+  margin-right: 20px;
   p {
     font-family: "Dosis";
     max-width: 450px;
     font-size: 18px;
     margin: 0;
   }
+  @media (max-width: 862px) {
+    justify-content: center;
+    margin-right: 0;
+    text-align: center;
+  }
 `
 
 const ImgContainer = styled.div`
-  width: 55%;
-  max-width: 500px;
+  width: 450px;
+  max-height: 400px;
   margin-bottom: 15px;
   min-width: 270px;
+  .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (max-width: 1150px) {
+    width: 250px;
+  }
 `
 
 const Button = styled.div`
   display: flex;
   justify-content: center;
   font-family: "Dosis", sans-serif;
-  background-color: #d59d82;
+  background-color: ${props => (props.instagram ? "white" : "#d59d82")};
   width: 150px;
   padding: 10px 0;
   border: 1px solid #d59d82;
   transition: all 0.5s ease-in-out;
   cursor: pointer;
-  box-shadow: 5px 5px 20px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: ${props =>
+    props.instagram ? 0 : "5px 5px 20px 0px rgba(50, 50, 50, 0.5)"};
   color: black;
   margin: 20px 0 0 0;
   &:hover {
     color: white;
     background-color: black;
     border: 1px solid white;
+  }
+  @media (max-width: 862px) {
   }
 `
 
