@@ -47,8 +47,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Philips-Portfolio`,
-        short_name: `portfolio`,
+        name: `Entlebucher Von der Laughy`,
+        short_name: `Entlebucher Welpen`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,

@@ -3,7 +3,7 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
-const Termin = () => {
+const Termin = props => {
   const data = useStaticQuery(graphql`
     query Termin {
       termin1: file(relativePath: { eq: "termin1.jpeg" }) {
@@ -49,32 +49,34 @@ const Termin = () => {
           <Button>Termin vereinbaren</Button>
         </Link>
       </Content>
-      <BottomContent>
-        <ImgContainer>
-          <Img
-            fluid={data.termin1.childImageSharp.fluid}
-            alt="Pepper as a baby"
-          />
-        </ImgContainer>
-        <ImgContainer>
-          <Img
-            fluid={data.termin2.childImageSharp.fluid}
-            alt="Pepper as a baby"
-          />
-        </ImgContainer>
-        <ImgContainer>
-          <Img
-            fluid={data.termin3.childImageSharp.fluid}
-            alt="Pepper as a baby"
-          />
-        </ImgContainer>
-        <ImgContainer>
-          <Img
-            fluid={data.termin4.childImageSharp.fluid}
-            alt="Pepper as a baby"
-          />
-        </ImgContainer>
-      </BottomContent>
+      {props.pics ? (
+        <BottomContent>
+          <ImgContainer>
+            <Img
+              fluid={data.termin1.childImageSharp.fluid}
+              alt="Pepper as a baby"
+            />
+          </ImgContainer>
+          <ImgContainer>
+            <Img
+              fluid={data.termin2.childImageSharp.fluid}
+              alt="Pepper as a baby"
+            />
+          </ImgContainer>
+          <ImgContainer>
+            <Img
+              fluid={data.termin3.childImageSharp.fluid}
+              alt="Pepper as a baby"
+            />
+          </ImgContainer>
+          <ImgContainer>
+            <Img
+              fluid={data.termin4.childImageSharp.fluid}
+              alt="Pepper as a baby"
+            />
+          </ImgContainer>
+        </BottomContent>
+      ) : null}
     </Container>
   )
 }
