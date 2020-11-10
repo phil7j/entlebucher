@@ -4,7 +4,6 @@ import Img from "gatsby-image"
 
 const ImageGrid = props => {
   let data = props.data
-  console.log("data in ImageGrid", data)
   return (
     <Grid>
       {/*  TODO PHil: Query GRAPHQL Data from Sanity to Gatsby and use in ImageGrid comp*/}

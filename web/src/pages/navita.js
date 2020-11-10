@@ -50,7 +50,7 @@ const Navita = () => {
               naVita bietet uns die beste & natürlichste Tiernahrung für unsere
               Hündin und ihre Welpen:
             </p>
-            <p>
+            <div className={"check"}>
               <Check>
                 {" "}
                 <Img
@@ -59,8 +59,8 @@ const Navita = () => {
                 />
               </Check>
               durchschnittlich 70% Fleisch- & Fischanteil
-            </p>
-            <p>
+            </div>
+            <div className={"check"}>
               <Check>
                 {" "}
                 <Img
@@ -69,8 +69,8 @@ const Navita = () => {
                 />
               </Check>
               von Ernährungsfachleuten entwickelt
-            </p>
-            <p>
+            </div>
+            <div className={"check"}>
               <Check>
                 {" "}
                 <Img
@@ -79,7 +79,7 @@ const Navita = () => {
                 />
               </Check>
               frei von jeglichen Zusatzstoffen
-            </p>
+            </div>
           </FirstDescription>
         </Content>
       </FirstRow>
@@ -177,16 +177,21 @@ const Content = styled.div`
 `
 const FirstDescription = styled.div`
   min-width: 270px;
-  p {
+  div.check {
     font-family: "Dosis";
     max-width: 400px;
     font-size: 18px;
-    margin: 10px;
     display: flex;
     align-items: center;
+    margin: 10px 0 10px 40%;
   }
-  p:first-child {
+  p {
     margin-bottom: 25px;
+  }
+  @media (max-width: 1105px) {
+    div.check {
+      margin: 10px auto;
+    }
   }
 `
 const SecondDescription = styled.div`
@@ -196,8 +201,15 @@ const SecondDescription = styled.div`
     max-width: 400px;
     font-size: 18px;
     margin: 0 0 20px 0;
-    display: flex;
-    align-items: center;
+  }
+  @media (max-width: 700px) {
+    a {
+      display: flex;
+      justify-content: center;
+    }
+    p {
+      text-align: center;
+    }
   }
 `
 const ThirdDescription = styled.div`
@@ -231,6 +243,9 @@ const Subtitle = styled.div`
   line-height: 35px;
   span {
     font-style: italic;
+  }
+  @media (max-width: 700px) {
+    text-align: center;
   }
 `
 const ImgContainer = styled.div`
@@ -275,7 +290,7 @@ const BottomImage = styled.div`
   width: 80%;
   max-width: 900px;
   min-width: 150px;
-  margin: 75px 20px;
+  margin: 30px 20px 30px 20px;
 `
 
 export default Navita
