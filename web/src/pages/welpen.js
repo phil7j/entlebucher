@@ -9,7 +9,7 @@ import ThreePicRow from "../components/ThreePicRow"
 const Welpen = () => {
   const data = useStaticQuery(graphql`
     query {
-      welpen: file(relativePath: { eq: "welpen2.JPG" }) {
+      welpe: file(relativePath: { eq: "welpen2.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -116,7 +116,7 @@ const Welpen = () => {
           <ImgContainer>
             <Img
               className={"image"}
-              fluid={data.welpen.childImageSharp.fluid}
+              fluid={data.welpe.childImageSharp.fluid}
               alt="A dog paw"
             />
           </ImgContainer>
