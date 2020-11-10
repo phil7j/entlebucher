@@ -102,9 +102,13 @@ const Welpen = () => {
             Auf unserer Instagram Seite posten wir laufend Fotos von Pepper &
             unseren Welpen:{" "}
           </p>
-          <Link to={"/kontakt"}>
+          <a
+            href={"https://instagram.com/entlebucher_von_der_laughy"}
+            target={"_blank"}
+            rel={"noreferrer"}
+          >
             <Button instagram={true}>Instagram</Button>
-          </Link>
+          </a>
         </Instagram>
       </UnsereWelpen>
       <Background>
