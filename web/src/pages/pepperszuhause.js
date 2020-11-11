@@ -141,7 +141,7 @@ const RightColumn = styled.div`
   p {
     font-family: "Dosis", sans-serif;
     max-width: 600px;
-    margin-right: 30px;
+    //margin-right: 30px;
     margin-bottom: 0;
     line-height: 30px;
   }

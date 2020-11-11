@@ -188,21 +188,20 @@ const Title = styled.div`
   flex-direction: column;
   max-width: 450px;
   flex-grow: 1;
-  margin-right: 10px;
   h1 {
     font-size: 40.5px;
     letter-spacing: 1px;
     font-family: "Abhaya Libre";
     font-weight: bold;
     text-align: left;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
   h4 {
     font-family: "Dosis", sans-serif;
     color: #d59d82;
     font-weight: 400;
-    letter-spacing: 0px;
     font-size: 26px;
+    margin-bottom: 50px;
   }
   @media (max-width: 500px) {
     align-items: center;
@@ -218,8 +217,8 @@ const Container = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   padding: 30px 20px;
   @media (max-width: 500px) {
     padding: 10px 0;
@@ -277,12 +276,12 @@ const Content = styled.div`
 `
 const Description = styled.div`
   display: flex;
-  margin-right: 20px;
   p {
     font-family: "Dosis";
-    max-width: 450px;
+    max-width: 500px;
     font-size: 18px;
     margin: 0;
+    text-align: center;
   }
   @media (max-width: 862px) {
     justify-content: center;
