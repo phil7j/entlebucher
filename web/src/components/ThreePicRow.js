@@ -25,7 +25,7 @@ const ThreePicRow = props => {
   )
 }
 const Container = styled.div`
-  margin: 30px auto;
+  margin: 0 auto 30px auto;
   max-width: 1360px;
 `
 

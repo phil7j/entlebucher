@@ -7,7 +7,7 @@ import Img from "gatsby-image"
 const Steckbrief = () => {
   const data = useStaticQuery(graphql`
     query {
-      rude: file(relativePath: { eq: "pepper-belo.JPG" }) {
+      rude: file(relativePath: { eq: "pepper-alfie1.jpeg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -51,7 +51,10 @@ const Steckbrief = () => {
               <h4>Hallo, ich bin Pepper!</h4>
             </div>
             <ImageContainer>
-              <Img fluid={data.sideShot.childImageSharp.fluid} />
+              <Img
+                className={"image"}
+                fluid={data.sideShot.childImageSharp.fluid}
+              />
             </ImageContainer>
           </LeftColumn>
           <RightColumn>
@@ -73,7 +76,10 @@ const Steckbrief = () => {
             </div>
 
             <ImageContainer>
-              <Img fluid={data.eating.childImageSharp.fluid} />
+              <Img
+                className={"image"}
+                fluid={data.eating.childImageSharp.fluid}
+              />
             </ImageContainer>
           </RightColumn>
         </Container>
@@ -87,9 +93,12 @@ const Steckbrief = () => {
               </h1>
               <h4>Steckbrief</h4>
             </div>
-            <ImageContainer>
-              <Img fluid={data.rude.childImageSharp.fluid} />
-            </ImageContainer>
+            <ImageContainer1>
+              <Img
+                className={"image"}
+                fluid={data.rude.childImageSharp.fluid}
+              />
+            </ImageContainer1>
           </LeftColumn>
           <RightColumn>
             <div>
@@ -121,7 +130,10 @@ const Steckbrief = () => {
             </div>
 
             <ImageContainer>
-              <Img fluid={data.mountain.childImageSharp.fluid} />
+              <Img
+                className={"image"}
+                fluid={data.mountain.childImageSharp.fluid}
+              />
             </ImageContainer>
           </RightColumn>
         </Container>
@@ -188,6 +200,14 @@ const RightColumn = styled.div`
 `
 const ImageContainer = styled.div`
   width: 100%;
+  max-height: 350px;
+  max-width: 600px;
+  margin: 50px 0;
+`
+
+const ImageContainer1 = styled.div`
+  width: 100%;
+  max-height: 350px;
   max-width: 600px;
   margin: 50px 0;
 `

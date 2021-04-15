@@ -21,7 +21,7 @@ const WelpenZuchtHome = () => {
         <h2>
           Welpen<span>zucht</span>
         </h2>
-        <Subtitle>Wir hatten unseren ersten Wurf im August 2020!</Subtitle>
+        <Subtitle>Wir erwarten unseren nächsten Wurf im Mai 2021!</Subtitle>
         <p>
           Die Welpenvermittlungsstelle des Schweizerischen Klubs für Entlebucher
           Sennenhunde gibt Ihnen gerne Auskunft über die zu vermittelnden Welpen
