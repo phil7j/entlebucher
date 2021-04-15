@@ -36,7 +36,11 @@ const Header = () => {
     <>
       <Container>
         <Logo setOpen={setOpen} />
-        <Hamburger open={open} onClick={() => setOpen(!open)} />
+        <Hamburger
+          className={"hamburger"}
+          open={open}
+          onClick={() => setOpen(!open)}
+        />
         <Nav open={open}>
           {links.map((link, index) =>
             link.type === "dropdown" ? (
@@ -69,25 +73,7 @@ const Header = () => {
   )
 }
 
-const Hamburger = styled(MenuIcon)`
-  display: none;
-  font-size: 50px;
-  padding: 0px 15px;
-  height: 100%;
-  box-sizing: content-box;
-  z-index: 101;
-  color: #d59d82;
-  cursor: pointer;
-  &:hover {
-    color: black;
-  }
-  @media (max-width: 1024px) {
-    display: block;
-    font-size: 50px;
-  }
-  @media (max-width: 600px) {
-  }
-`
+const Hamburger = styled(MenuIcon)``
 
 const Container = styled.div`
   display: flex;
@@ -101,6 +87,25 @@ const Container = styled.div`
   overflow: hidden;
   @media (max-width: 1024px) {
     justify-content: space-between;
+  }
+  .MuiSvgIcon-root.hamburger {
+    display: none;
+    font-size: 50px;
+    padding: 0px 15px;
+    height: 100%;
+    box-sizing: content-box;
+    z-index: 101;
+    color: #d59d82;
+    cursor: pointer;
+    &:hover {
+      color: black;
+    }
+    @media (max-width: 1024px) {
+      display: block;
+      font-size: 50px;
+    }
+    @media (max-width: 600px) {
+    }
   }
 `
 
