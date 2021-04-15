@@ -1,7 +1,7 @@
 import React from "react"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import { useStaticQuery, graphql, Link } from "gatsby"
+import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Termin from "../components/home/Termin"
 import ThreePicRow from "../components/ThreePicRow"
@@ -65,8 +65,16 @@ const Welpen = () => {
       <SEO title="Welpen" />
       <UnsereWelpen>
         <Container>
-          <Title>
+          <PageTitle>
             <h1>Unsere Welpen</h1>
+          </PageTitle>
+          <Title>
+            <h4>Der B-Wurf von der Laughy</h4>
+          </Title>
+          <Description>
+            <p>Wir erwarten unseren nächsten Wurf im Mai 2021. </p>
+          </Description>
+          <Title>
             <h4>Der A-Wurf von der Laughy</h4>
           </Title>
           <Description>
@@ -188,14 +196,7 @@ const Title = styled.div`
   flex-direction: column;
   max-width: 450px;
   flex-grow: 1;
-  h1 {
-    font-size: 40.5px;
-    letter-spacing: 1px;
-    font-family: "Abhaya Libre";
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: 10px;
-  }
+  margin-top: 30px;
   h4 {
     font-family: "Dosis", sans-serif;
     color: #d59d82;
@@ -205,6 +206,15 @@ const Title = styled.div`
   }
   @media (max-width: 500px) {
     align-items: center;
+  }
+`
+const PageTitle = styled.div`
+  h1 {
+    font-size: 40.5px;
+    letter-spacing: 1px;
+    font-family: "Abhaya Libre";
+    font-weight: bold;
+    text-align: left;
   }
 `
 
@@ -276,6 +286,7 @@ const Content = styled.div`
 `
 const Description = styled.div`
   display: flex;
+  margin-bottom: 30px;
   p {
     font-family: "Dosis";
     max-width: 500px;

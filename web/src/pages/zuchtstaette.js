@@ -36,7 +36,7 @@ const Zuchtstaette = () => {
           }
         }
       }
-      bello: file(relativePath: { eq: "cesar-bello.jpeg" }) {
+      alfie: file(relativePath: { eq: "alfie1.jpg" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
@@ -47,7 +47,7 @@ const Zuchtstaette = () => {
   `)
   let dataForGrid
   if (data) {
-    dataForGrid = Object.entries(data).filter(pic => pic[0] !== "bello")
+    dataForGrid = Object.entries(data).filter(pic => pic[0] !== "alfie")
   }
   return (
     <>
@@ -101,34 +101,47 @@ const Zuchtstaette = () => {
       <BottomHalf>
         <BottomContainer>
           <BottomImgContainer>
-            <Img fluid={data.bello.childImageSharp.fluid} alt="Der Rüde" />
+            <Img fluid={data.alfie.childImageSharp.fluid} alt="Der Rüde" />
           </BottomImgContainer>
           <Content>
             <h2>
               Der<span> Rüde</span>
             </h2>
-            <Subtitle>Bello-Cesar vom Oberbaselbiet</Subtitle>
+            <Subtitle>Alfie vom Kornried</Subtitle>
             <BottomDescription>
               <p>
-                CESAR ist ein verspielter und familienfreundlicher Rüde, der am
-                21.03.2018 in Oberbaselbiet (CH) geboren wurde bei der Familie
-                Crimi.
+                Spitzname: Malon <br />
+                Geburtsname: Alfie vom Kornried
+                <br />
+                Rasse: Entlebucher Sennenhund
+                <br />
+                Geburtstag: 29,02,2016 <br />
+                Gewicht: 25 kg <br />
+                Tricks: Packet Papiernastücher apportieren <br />
+                Kentnisse: Therapiehund <br />
+                Vorlieben: Spielen mit Freunden <br />
+                Abneigungen: Wasser
+                <br />
               </p>{" "}
               <p>
-                Er fühlt sich pudelwohl in den Wäldern und auf den Wiesen in und
-                rund um Zürich. Bei langen und ausgedehnten Spaziergängen spielt
-                er sehr gerne mit anderen Hunden. Die Zuchttauglichkeitsprüfung
-                (Körung) hat CESAR im Oktober 2019 mit Bravour bestanden. Das
-                Verhalten und das Wesen von ihm sind exzellent. 
+                <br />
+                Wie ich zu Frauchen/Herrchen kam: Ich wurde von Zeno, dem
+                Jüngsten Sohn der Familie Tschümperlin ausgewählt.
               </p>{" "}
+              <p>
+                Lieblingsessen: Wurst und Käse <br />
+                Lieblingsspielzeug: Frosch <br />
+                <br />
+                Lieblingsort: Ein Platz an der Sonne <br />
+              </p>
             </BottomDescription>
-            <a
-              href={"https://bello-cesar.ch/cesar/"}
-              target={"_blank"}
-              rel={"noreferrer"}
-            >
-              <Button>mehr über Bello-Cesar</Button>
-            </a>
+            {/*<a*/}
+            {/*  href={"https://bello-cesar.ch/cesar/"}*/}
+            {/*  target={"_blank"}*/}
+            {/*  rel={"noreferrer"}*/}
+            {/*>*/}
+            {/*  <Button>mehr über Bello-Cesar</Button>*/}
+            {/*</a>*/}
           </Content>
         </BottomContainer>
       </BottomHalf>
@@ -216,6 +229,7 @@ const BottomContainer = styled.div`
   max-width: 1400px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 20px;
@@ -249,7 +263,7 @@ const BottomDescription = styled.div`
   margin: 25px 0px;
   p {
     font-family: "Dosis";
-    max-width: 600px;
+    max-width: 400px;
     font-size: 18px;
     margin: 0;
     line-height: 28px;
@@ -267,9 +281,8 @@ const Subtitle = styled.div`
   text-align: left;
 `
 const BottomImgContainer = styled.div`
-  width: 55%;
-  min-width: 280px;
-  max-width: 500px;
-  margin-bottom: 15px;
+  width: 50%;
+  min-width: 350px;
+  margin: 30px;
 `
 export default Zuchtstaette
