@@ -4,7 +4,8 @@ import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import SEO from "../components/seo"
 import Termin from "../components/home/Termin"
-import ThreePicRow from "../components/ThreePicRow"
+import AWurf from "../components/welpen/AWurf"
+import BWurf from "../components/welpen/BWurf"
 
 const Welpen = () => {
   const data = useStaticQuery(graphql`
@@ -69,37 +70,14 @@ const Welpen = () => {
             <h1>Unsere Welpen</h1>
           </PageTitle>
           <Title>
-            <h4>Der B-Wurf von der Laughy</h4>
+            <h4>Der C-Wurf von der Laughy</h4>
           </Title>
           <Description>
-            <p>Wir erwarten unseren nächsten Wurf im Mai 2021. </p>
-          </Description>
-          <Title>
-            <h4>Der A-Wurf von der Laughy</h4>
-          </Title>
-          <Description>
-            <p>
-              Pepper ist stolze Mutter ihres ersten Wurfes! Am 12. & 13. August
-              2020 haben diese 3 süsse & gesunde Welpen das Licht der Welt
-              erblickt.{" "}
-            </p>
+            <p>Wir erwarten unseren nächsten Wurf im Sommer 2022. </p>
           </Description>
         </Container>
-        <ThreePicRow
-          title={"Aslan"}
-          description={"Geb. 12.08.2020, Gewicht: 420g"}
-          data={data.aslan.edges}
-        />
-        <ThreePicRow
-          title={"Archie"}
-          description={"Geb. 12.08.2020, Gewicht: 400g"}
-          data={data.archie.edges}
-        />
-        <ThreePicRow
-          title={"Amira"}
-          description={"Geb. 13.08.2020, Gewicht: 406g"}
-          data={data.amira.edges}
-        />
+        <BWurf />
+        <AWurf />
         <Instagram>
           <h2>
             Fotos von unserem
@@ -229,9 +207,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 20px;
   @media (max-width: 500px) {
-    padding: 10px 0;
     justify-content: center;
   }
 `
