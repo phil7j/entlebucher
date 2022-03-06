@@ -7,8 +7,8 @@ import ThreePicRow from "../ThreePicRow"
 const BWurf = () => {
   const data = useStaticQuery(graphql`
     query {
-      aslan: allFile(
-        filter: { relativeDirectory: { eq: "aslan" } }
+      bailey: allFile(
+        filter: { relativeDirectory: { eq: "bailey" } }
         sort: { order: ASC, fields: name }
       ) {
         edges {
@@ -21,8 +21,8 @@ const BWurf = () => {
           }
         }
       }
-      archie: allFile(
-        filter: { relativeDirectory: { eq: "archie" } }
+      belle: allFile(
+        filter: { relativeDirectory: { eq: "belle" } }
         sort: { order: ASC, fields: name }
       ) {
         edges {
@@ -35,8 +35,22 @@ const BWurf = () => {
           }
         }
       }
-      amira: allFile(
-        filter: { relativeDirectory: { eq: "amira" } }
+      bilbo: allFile(
+        filter: { relativeDirectory: { eq: "bilbo" } }
+        sort: { order: ASC, fields: name }
+      ) {
+        edges {
+          node {
+            childImageSharp {
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+      }
+      bolt: allFile(
+        filter: { relativeDirectory: { eq: "bolt" } }
         sort: { order: ASC, fields: name }
       ) {
         edges {
@@ -59,31 +73,30 @@ const BWurf = () => {
         </Title>
         <Description>
           <p>
-            Pepper ist stolze Mutter ihres zweiten Wurfes! Am 12. & 13. August
-            2020 haben diese 3 süsse & gesunde Welpen das Licht der Welt
-            erblickt.{" "}
+            Pepper ist stolze Mutter ihres zweiten Wurfes! Am 12. Mai 2021 haben
+            diese 4 süsse & gesunde Welpen das Licht der Welt erblickt.{" "}
           </p>
         </Description>
       </Container>
       <ThreePicRow
         title={"Bailey"}
-        description={"Geb. 12.08.2020, Gewicht: 420g"}
-        data={data.aslan.edges}
+        description={"Geb. 12.05.2021, Gewicht: 425g"}
+        data={data.bailey.edges}
       />
       <ThreePicRow
         title={"Belle"}
-        description={"Geb. 12.08.2020, Gewicht: 400g"}
-        data={data.archie.edges}
+        description={"Geb. 12.05.2021, Gewicht: 415g"}
+        data={data.belle.edges}
       />
       <ThreePicRow
         title={"Bilbo"}
-        description={"Geb. 13.08.2020, Gewicht: 406g"}
-        data={data.amira.edges}
+        description={"Geb. 12.05.2021, Gewicht: 325g"}
+        data={data.bilbo.edges}
       />
       <ThreePicRow
         title={"Bolt"}
-        description={"Geb. 13.08.2020, Gewicht: 406g"}
-        data={data.amira.edges}
+        description={"Geb. 12.05.2021, Gewicht: 400g"}
+        data={data.bolt.edges}
       />
     </>
   )
