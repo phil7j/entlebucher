@@ -48,11 +48,11 @@ const Footer = () => {
         <Link to={"/navita"}>naVita Produkte</Link>
         <Link to={"/kontakt"}>Kontakt</Link>
       </RightSection>
-      <Credit>
+      {/* <Credit>
         <a href={"https://johnsondesigns.tech/"}>
           <p>© 2020 by Johnson Designs</p>
         </a>
-      </Credit>
+      </Credit> */}
     </Container>
   )
 }

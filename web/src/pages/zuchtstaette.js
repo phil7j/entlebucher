@@ -36,7 +36,7 @@ const Zuchtstaette = () => {
           }
         }
       }
-      alfie: file(relativePath: { eq: "alfie1.jpg" }) {
+      alfie: file(relativePath: { eq: "Alfie.png" }) {
         childImageSharp {
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
